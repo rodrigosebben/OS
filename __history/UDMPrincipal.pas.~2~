@@ -1,0 +1,41 @@
+unit UDMPrincipal;
+
+interface
+
+uses
+  SysUtils, Classes, DB, DBAccess, MyAccess, MemDS;
+
+type
+  TDMPrincipal = class(TDataModule)
+    QueryUsuarios: TMyQuery;
+    MyQuery2: TMyQuery;
+    MyQuery3: TMyQuery;
+    MyQuery4: TMyQuery;
+    MyQuery5: TMyQuery;
+    MyConn: TMyConnection;
+    QueryUsuariosid: TLargeintField;
+    QueryUsuariosTipoUsuario_id: TLargeintField;
+    QueryUsuariosNome: TStringField;
+    QueryUsuariosUsuario: TStringField;
+    QueryUsuariosSenha: TStringField;
+    QueryUsuariosEndereco: TStringField;
+    QueryUsuariosCidade: TStringField;
+    QueryUsuariosUF: TStringField;
+    QueryUsuariosTelefone: TStringField;
+    QueryUsuariosCelular: TStringField;
+    QueryUsuariosEmail: TStringField;
+    QueryUsuariosNivelAcesso: TLargeintField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DMPrincipal: TDMPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+end.

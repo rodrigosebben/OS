@@ -1,0 +1,2777 @@
+object FormCadastros: TFormCadastros
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'FormCadastros'
+  ClientHeight = 461
+  ClientWidth = 841
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 841
+    Height = 461
+    Align = alClient
+    TabOrder = 0
+    object Panel2: TPanel
+      Left = 1
+      Top = 1
+      Width = 839
+      Height = 40
+      Align = alTop
+      Caption = 'CADASTROS'
+      Color = clHighlight
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clHighlightText
+      Font.Height = -21
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 0
+    end
+    object PgcCadastros: TPageControl
+      Left = 1
+      Top = 41
+      Width = 839
+      Height = 367
+      ActivePage = TbsUsuarios
+      Align = alClient
+      Images = ImageList1
+      TabOrder = 1
+      object TbsUsuarios: TTabSheet
+        Caption = 'USUARIOS'
+        ImageIndex = 15
+        object Panel5: TPanel
+          Left = 0
+          Top = 0
+          Width = 831
+          Height = 30
+          Align = alTop
+          TabOrder = 0
+          object Label1: TLabel
+            Left = 1
+            Top = 1
+            Width = 86
+            Height = 28
+            Align = alLeft
+            Caption = '  BUSCAR:  '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            ExplicitHeight = 19
+          end
+          object EdtBuscaUsuario: TEdit
+            Left = 87
+            Top = 1
+            Width = 743
+            Height = 28
+            Align = alClient
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 0
+            OnChange = EdtBuscaUsuarioChange
+            ExplicitHeight = 27
+          end
+        end
+        object Panel6: TPanel
+          Left = 0
+          Top = 30
+          Width = 831
+          Height = 138
+          Align = alClient
+          TabOrder = 1
+          object DBGridUsuarios: TDBGrid
+            Left = 1
+            Top = 1
+            Width = 829
+            Height = 136
+            Align = alClient
+            DataSource = DMPrincipal.DSUsuarios
+            Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+            ReadOnly = True
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            OnDblClick = BitBtnUsuarioEditarClick
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'Nome'
+                Width = 145
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Usuario'
+                Width = 78
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Endereco'
+                Width = 170
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Cidade'
+                Width = 102
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'UF'
+                Width = 34
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Telefone'
+                Width = 80
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Celular'
+                Width = 68
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Email'
+                Width = 171
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Nivel de acesso'
+                Width = 100
+                Visible = True
+              end>
+          end
+        end
+        object PanelU: TPanel
+          Left = 0
+          Top = 168
+          Width = 831
+          Height = 170
+          Align = alBottom
+          TabOrder = 2
+          object ToolBar1: TToolBar
+            Left = 1
+            Top = 1
+            Width = 829
+            Height = 40
+            ButtonHeight = 39
+            ButtonWidth = 69
+            Caption = 'ToolBar1'
+            Images = ImageList1
+            TabOrder = 0
+            object BitBtnUsuarioInserir: TBitBtn
+              Left = 0
+              Top = 0
+              Width = 75
+              Height = 39
+              Caption = 'INSERIR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF0041924E233D8F497D3A8C44DB368940F332873CF32F84
+                37DB2C81337D287F3023FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF0049995853459653E6419950FF7DC28FFF96D0A6FF96CFA6FF78BE
+                89FF368D42FF2C8134E6297F3053FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00519F61534D9C5DF464B478FFA8DBB5FF87CC98FF66BC7DFF64BA7CFF86CB
+                98FFA5D9B4FF58AA6BFF2C8134F4297F3053FFFFFF00FFFFFF00FFFFFF0059A6
+                6B2256A366E56AB97DFFA8DBB2FF60BC77FF5CBA73FF59B870FF59B56FFF58B5
+                6FFF5BB774FFA5D9B3FF5AAA6CFF2C8234E5297F3022FFFFFF00FFFFFF005DA9
+                707E53AB68FFAADDB4FF64C179FF5FBE71FF60BC77FFFFFFFFFFFFFFFFFF59B8
+                70FF58B56EFF5CB774FFA6DAB4FF388F43FF2C82347EFFFFFF00FFFFFF0061AC
+                75DB8ACC98FF89D396FF6BC67AFF63C170FF55AB65FFFFFFFFFFFFFFFFFF59B8
+                70FF59B870FF5BB972FF85CC97FF7BBE8DFF308539DBFFFFFF00FFFFFF0065AF
+                7AF6A9DDB3FF7DCF8AFF75CC81FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF59B870FF67BE7DFF9CD4ABFF34883DF6FFFFFF00FFFFFF0069B2
+                7EF6B6E2BEFF8BD597FF7AC986FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF59B870FF69C17EFF9DD4AAFF388B42F6FFFFFF00FFFFFF006DB5
+                83DBACDDB6FFA6DFAFFF81CB8CFF7CC986FF6EBD79FFFFFFFFFFFFFFFFFF5BAC
+                6AFF60BC77FF5CBA73FF8BD199FF80C592FF3C8E47DBFFFFFF00FFFFFF0070B8
+                877E85C797FFD2EED7FF95D9A0FF8AD394FF7FC889FFFFFFFFFFFFFFFFFF79CD
+                85FF6BC37CFF6FC77EFFACDFB5FF459E57FF40914C7EFFFFFF00FFFFFF0073BA
+                8A2270B887E5AADAB7FFD8F1DCFF92D89DFF88CD93FF84CC8EFF8BD496FF8AD4
+                95FF83D28EFFAFE0B7FF6BB97DFF489856E544945122FFFFFF00FFFFFF00FFFF
+                FF0073BB8B5370B887F4AFDCBBFFDCF2E0FFB6E4BDFF9BDBA5FF96D9A0FFA5DF
+                AFFFC0E8C5FF79C28AFF509E5FF44C9B5B53FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF0073BB8B5371B887E694CEA4FFC3E6CBFFCFEBD4FFC9E9CEFFAFDD
+                B8FF6DB97FFF58A569E654A16553FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF0074BB8B2371B9887D6EB684DB6AB380F367B17CF363AE
+                77DB60AB737D5CA86E23FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 3
+              OnClick = BitBtnUsuarioInserirClick
+            end
+            object BitBtnUsuarioEditar: TBitBtn
+              Left = 75
+              Top = 0
+              Width = 75
+              Height = 39
+              Caption = 'EDITAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00113D55F7285F87FB4988BDFB428DBCC12D77B322FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF002B6583FB94C7F9FF91C9F9FF4185C9FF1C64AAF32E79
+                B92FFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00A97151A9C38E
+                68FFC08B66FFBE8864FF4389AAFFE0F2FFFF549AD8FF1A7ABEFF4998C5FF4081
+                B6FF99796BFFAB7554FFA97353FFA97151FFA97151A9FFFFFF00C8926CFFFFFF
+                FFFFFFFFFFFFFFFFFFFFA7C5D9FF7AB6D5FF90B7D1FF55C9E4FF5BDFF5FF78D0
+                EDFF519DDDFFE4F0FAFFFFFFFFFFFFFFFFFFA97251FFFFFFFF00CA946EFFFFFF
+                FFFFFFFFFFFFFFFFFEFFFFFFFDFFB3D6E6FF76BAD7FFC2F6FDFF63DFF7FF5DE2
+                F8FF79D3F0FF4A99DCFFE3EEF5FFFFFFFFFFAA7353FFFFFFFF00CC976FFFFFFF
+                FFFFFFFFFCFFFFFFFDFFFEFEFCFFFEFEFCFFB0D5E4FF77CBE7FFC7F7FDFF5EDC
+                F5FF5AE1F7FF7BD4F1FF4B9ADDFFD6E8F7FFAC7554FFFFFFFF00D19C73FFFFFF
+                FFFFFEFEFCFFFEFEFCFFFEFEFCFFFDFDFBFFFDFDFBFFBEE7F1FF79D3EEFFC7F7
+                FDFF5FDCF5FF5BE2F7FF7AD6F2FF51A2E2FF9C7E6EFFFFFFFF00D49E75FFFFFF
+                FFFFFEFEFCFFFDFDFBFFFDFDFCFFFDFDFBFFFDFDF9FFFCFCF8FFBEE6F2FF7DD4
+                EEFFC4F6FDFF6CDDF6FF6DCAEDFF63A3D7FF6399C9FF5192CA26D5A076FFFFFF
+                FFFFFDFDFCFFFDFDFBFFFDFDFAFFFCFCF9FFFCFBF7FFFBF9F5FFFBF8F4FFB3E1
+                EDFF81D6EEFFB2E3F9FF8BC0E7FFAED3F6FFC4E0FCFF669FD3F7D8A279FFFFFF
+                FFFFFDFDFAFFFCFCFAFFFCFBF9FFFBFAF6FFFBF8F5FFFBF7F4FFFBF6F1FFF8F4
+                EEFFABDDE8FF77BEE7FFB4D2F0FFE5F3FFFFACD2EFFF488CC7E8D9A379FFFFFF
+                FFFFFCFBF9FFFCFBF8FFFBF9F7FFFBF7F4FFFAF7F2FFF9F5F0FFF7F3EDFFF6EF
+                EAFFF5EBE7FFB4D7E2FF58A5D8FF85B1DBFF469DD0FF2B95D15EDBA47AFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBD8763FFFFFFFF00DCA77BFFDCA7
+                7BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFDCA7
+                7BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFC08B66FFFFFFFF00DDAC85FDE8B9
+                92FFE8B992FFE8B992FFE8B992FFE8B992FFE8B992FFE8B992FFE8B992FFE8B9
+                92FFE8B992FFE8B992FFE8B992FFE8B992FFC1906FFDFFFFFF00A971516BDDB1
+                8DF4DCA77BFFDCA67AFFDAA47AFFD8A279FFD5A076FFD49E75FFD29D73FFCF9A
+                72FFCE9970FFCB966FFFC9946CFFC49A7AF4A971516BFFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 2
+              OnClick = BitBtnUsuarioEditarClick
+            end
+            object BitBtnUsuarioSalvar: TBitBtn
+              Left = 150
+              Top = 0
+              Width = 75
+              Height = 39
+              Caption = 'SALVAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000BA6A368FB969
+                35B5B86935EEB76835FFB56835FFB46734FFB26634FFB06533FFAE6433FFAC63
+                32FFAA6232FFA96132FFA86031FFA76031FEA66031F1A86131C4BA6A35DEEBC6
+                ADFFEAC5ADFFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+                F8FFFEFBF8FFFEFBF8FFFEFBF8FFC89A7CFFC79879FFA76031EDBA6B37FEEDCA
+                B3FFE0A27AFFFEFAF7FF62C088FF62C088FF62C088FF62C088FF62C088FF62C0
+                88FF62C088FF62C088FFFDF9F6FFCA8D65FFC99B7CFFA76031FEBB6C38FFEECC
+                B6FFE1A27AFFFEFAF7FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDC
+                C2FFBFDCC2FFBFDCC2FFFDF9F6FFCD9068FFCC9E81FFA86132FFBB6B38FFEFCE
+                B8FFE1A279FFFEFAF7FF62C088FF62C088FF62C088FF62C088FF62C088FF62C0
+                88FF62C088FF62C088FFFDF9F6FFCF936AFFCEA384FFAA6132FFBA6A36FFEFD0
+                BBFFE2A27AFFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+                F8FFFEFBF8FFFEFBF8FFFEFBF8FFD3966DFFD2A78AFFAB6232FFBB6A36FFF0D2
+                BEFFE2A37AFFE2A37AFFE1A37AFFE2A37BFFE1A37BFFE0A178FFDE9F77FFDD9F
+                76FFDC9D74FFD99B72FFD89971FFD69970FFD5AB8EFFAD6333FFBB6A36FFF2D5
+                C2FFE3A37AFFE3A37AFFE2A37BFFE2A37BFFE2A47BFFE1A279FFE0A178FFDEA0
+                77FFDE9E75FFDC9D74FFDA9B73FFD99B73FFDAB095FFAF6433FFBB6A36FFF2D8
+                C5FFE3A47BFFE3A37AFFE3A47AFFE2A47BFFE2A37BFFE1A37BFFE1A279FFDFA0
+                77FFDE9F76FFDD9E74FFDB9C72FFDC9D74FFDDB59AFFB16534FFBB6B36FFF4D9
+                C7FFE6A67DFFC88C64FFC98D65FFC98E67FFCB926CFFCB926DFFCA9069FFC88C
+                65FFC88C64FFC88C64FFC88C64FFDA9C74FFE1BA9FFFB36634FFBB6B36FEF4DC
+                C9FFE7A77DFFF9ECE1FFF9ECE1FFF9EDE3FFFCF4EEFFFDFAF7FFFDF7F3FFFAED
+                E5FFF7E7DBFFF7E5D9FFF6E5D8FFDEA077FFE4BEA4FFB46734FFBC6B36FAF5DD
+                CCFFE7A87EFFFAF0E8FFFAF0E8FFC98D66FFFAF0E9FFFDF8F3FFFEFAF8FFFCF4
+                EFFFF9E9DFFFF7E7DBFFF7E5D9FFE0A278FFE7C2A9FFB66835FFBC6B36F0F6DF
+                D0FFE8A87EFFFCF6F1FFFCF6F1FFC88C64FFFAF1E9FFFBF4EEFFFDFAF7FFFDF9
+                F6FFFAF0E8FFF8E8DDFFF7E6DBFFE1A37AFFEFD5C3FFB76935FEBC6B36D8F6DF
+                D1FFE9AA80FFFEFAF6FFFDFAF6FFC88C64FFFBF3EEFFFBF1EAFFFCF6F2FFFEFB
+                F8FFFCF6F1FFF9ECE2FFF8E7DBFFEED0BAFFECD0BDFFBB703EF8BC6B369BF6E0
+                D1FFF7E0D1FFFEFBF8FFFEFBF7FFFDF9F6FFFCF5F0FFFAF0EAFFFBF2EDFFFDF9
+                F6FFFDFAF7FFFBF1EBFFF8E9DFFEECD0BDFBC9895EECB5693563BC6B3671BC6B
+                3690BC6B36CCBC6B36EEBC6B36FABB6B36FEBB6B36FFBB6A36FFBB6A36FFBC6C
+                39FFBD6E3BFFBB6D3AFFBB6B38EFBB703ECBB6693554FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 1
+              OnClick = BitBtnUsuarioSalvarClick
+            end
+            object BitBtnUsuarioCancelar: TBitBtn
+              Left = 225
+              Top = 0
+              Width = 75
+              Height = 39
+              Caption = 'CANCELAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF000000F1EC0000F1FF0000F1FF0000F1FF0000EFFF0000
+                EFFF0000EDFF0000EDEDFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF000000F5EC1A20F5FF3C4CF9FF3A49F8FF3847F8FF3545F8FF3443
+                F7FF3242F7FF141BF1FF0000EDE8FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF000000F7EC1D23F9FF4453FAFF2429F9FF1212F7FF0F0FF6FF0C0CF5FF0909
+                F5FF161BF5FF3343F7FF141BF1FF0000EDE8FFFFFF00FFFFFF00FFFFFF000000
+                F9EC1F25FAFF4A58FBFF4247FBFFC9C9FDFF3B3BF9FF1313F7FF1010F6FF3333
+                F7FFC5C5FDFF3035F7FF3444F7FF141BF2FF0000EDE8FFFFFF00FFFFFF000000
+                FBFF4F5DFDFF3237FBFFCBCBFEFFF2F2FFFFEBEBFEFF3B3BF9FF3939F8FFEAEA
+                FEFFF1F1FEFFC5C5FDFF181DF6FF3343F7FF0000EFFFFFFFFF00FFFFFF000000
+                FDFF525FFDFF2828FCFF4747FCFFECECFFFFF2F2FFFFECECFFFFECECFEFFF1F1
+                FFFFEAEAFEFF3434F7FF0B0BF5FF3545F8FF0000EFFFFFFFFF00FFFFFF000000
+                FDFF5562FEFF2C2CFDFF2929FCFF4848FCFFEDEDFFFFF2F2FFFFF2F2FFFFECEC
+                FEFF3A3AF9FF1212F7FF0F0FF6FF3848F8FF0000F1FFFFFFFF00FFFFFF000000
+                FDFF5764FEFF3030FDFF2D2DFDFF4B4BFCFFEDEDFFFFF2F2FFFFF2F2FFFFECEC
+                FFFF3D3DF9FF1616F8FF1313F7FF3C4BF8FF0000F1FFFFFFFF00FFFFFF000000
+                FFFF5A67FEFF3333FEFF5050FDFFEDEDFFFFF3F3FFFFEDEDFFFFEDEDFFFFF2F2
+                FFFFECECFEFF3E3EFAFF1717F8FF3F4EF9FF0000F1FFFFFFFF00FFFFFF000000
+                FFFF5B68FFFF4347FEFFCFCFFFFFF3F3FFFFEDEDFFFF4C4CFCFF4A4AFCFFECEC
+                FFFFF2F2FFFFCACAFEFF2A2FFAFF4251FAFF0000F3FFFFFFFF00FFFFFF000000
+                FFEB262BFFFF5D6AFFFF585BFFFFCFCFFFFF5252FEFF2F2FFDFF2C2CFDFF4B4B
+                FCFFCCCCFEFF484CFBFF4957FBFF1D23F9FF0000F5EBFFFFFF00FFFFFF00FFFF
+                FF000000FFEB262BFFFF5D6AFFFF4347FFFF3434FEFF3232FEFF3030FDFF2D2D
+                FDFF383CFCFF4F5DFCFF1F25FAFF0000F7EBFFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF000000FFEB262BFFFF5C69FFFF5B68FFFF5A67FEFF5865FEFF5663
+                FEFF5461FEFF2227FCFF0000FBF2FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF000000FFEC0000FFFF0000FFFF0000FFFF0000FDFF0000
+                FDFF0000FDFF0000FDECFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 4
+              OnClick = BitBtnUsuarioCancelarClick
+            end
+            object BitBtnUsuarioDeletar: TBitBtn
+              Left = 300
+              Top = 0
+              Width = 75
+              Height = 39
+              Caption = 'DELETAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF003F54C3233A50C27D3853BEDB3551BDF3304BBCF32E4E
+                B8DB2B4CB77D2748B523FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF004658C8534255C6E63C52CCFF757AE8FF8F92EEFF8F92EEFF7178
+                E4FF334DC1FF2B4AB7E6294BB553FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF004D5ACD534959CBF45C65E0FFA1A6F5FF7E86EFFF5B63E9FF595DE7FF7D84
+                EEFF9EA0F4FF515DD7FF2B4AB7F4294BB553FFFFFF00FFFFFF00FFFFFF00545F
+                D2225361CFE5616BE3FFA1ACF5FF545FECFF505CEAFF4D59E9FF4E59E6FF4C56
+                E6FF5056E6FF9EA2F4FF5460D6FF2A4AB8E5294BB522FFFFFF00FFFFFF005860
+                D47E4B56DBFFA2ABF6FF5664F0FF5266EEFF4D59E9FF4D59E9FF4D59E9FF4D59
+                E9FF4C58E6FF525AE6FF9FA3F5FF3450C4FF2A4AB87EFFFFFF00FFFFFF005C62
+                D7DB818CEEFF7E91F7FF5D73F3FF4D59E9FF4D59E9FF4D59E9FF4D59E9FF4D59
+                E9FF4D59E9FF4F5BE9FF7B83F0FF757BE2FF2E4BBADBFFFFFF00FFFFFF005F63
+                DAF6A1ABF7FF7086F8FF6882F6FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF4D59E9FF5C66EAFF969CF1FF3250BCF6FFFFFF00FFFFFF006469
+                DBF6AFB9F9FF7F93FAFF7085F0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF4D59E9FF5E6AEEFF969DF1FF364FBEF6FFFFFF00FFFFFF00676A
+                DEDBA5AFF5FF9DABFAFF778CF0FF545FECFF545FECFF545FECFF545FECFF545F
+                ECFF545FECFF6377F2FF818EF4FF787FE9FF3A53C0DBFFFFFF00FFFFFF006A69
+                E07E7D83EAFFCDD4FCFF8B9DFAFF7E93F7FF758AEEFF6C84F6FF6C84F6FF6C84
+                F6FF6C84F6FF6379F3FFA4AFF8FF3E4FD0FF3E54C27EFFFFFF00FFFFFF006C6C
+                E1226A69E0E5A3A7F3FFD4DBFDFF879AFAFF7F91F0FF7A8EF1FF7F94F8FF7E92
+                F9FF768CF8FFA8B6F8FF636EE3FF4557C7E54156C522FFFFFF00FFFFFF00FFFF
+                FF006D6CE3536A69E0F4AAADF2FFD8DCFDFFAEBAFAFF91A3FAFF8B9DFAFF9CA9
+                FBFFBAC7FCFF707BE9FF4C5BCCF44858CA53FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF006D6CE3536A6ADFE68E93EDFFBEC3F8FFCCD3F9FFC4CBF9FFAAB4
+                F4FF6670E2FF535ED1E6505DCE53FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF006D6DE2236B6AE17D686ADDDB6364DCF36164DAF35D63
+                D9DB5B63D67D5862D423FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 0
+              OnClick = BitBtnUsuarioDeletarClick
+            end
+          end
+          object PanelUsuarios: TPanel
+            Left = 1
+            Top = 41
+            Width = 829
+            Height = 128
+            Align = alClient
+            Enabled = False
+            TabOrder = 1
+            object Label10: TLabel
+              Left = 4
+              Top = 4
+              Width = 27
+              Height = 13
+              Caption = 'Nome'
+              FocusControl = DBEditNome
+            end
+            object Label11: TLabel
+              Left = 260
+              Top = 5
+              Width = 36
+              Height = 13
+              Caption = 'Usuario'
+              FocusControl = DBEditUsuario
+            end
+            object Label12: TLabel
+              Left = 369
+              Top = 5
+              Width = 30
+              Height = 13
+              Caption = 'Senha'
+              FocusControl = DBEditSenha
+            end
+            object Label13: TLabel
+              Left = 464
+              Top = 3
+              Width = 45
+              Height = 13
+              Caption = 'Endereco'
+              FocusControl = DBEditEndereco
+            end
+            object Label14: TLabel
+              Left = 4
+              Top = 44
+              Width = 33
+              Height = 13
+              Caption = 'Cidade'
+              FocusControl = DBEditCidade
+            end
+            object Label15: TLabel
+              Left = 160
+              Top = 44
+              Width = 13
+              Height = 13
+              Caption = 'UF'
+              FocusControl = DBEditUF
+            end
+            object Label16: TLabel
+              Left = 196
+              Top = 44
+              Width = 42
+              Height = 13
+              Caption = 'Telefone'
+              FocusControl = DBEditTelefone
+            end
+            object Label17: TLabel
+              Left = 302
+              Top = 44
+              Width = 33
+              Height = 13
+              Caption = 'Celular'
+              FocusControl = DBEditCelular
+            end
+            object Label18: TLabel
+              Left = 409
+              Top = 44
+              Width = 24
+              Height = 13
+              Caption = 'Email'
+              FocusControl = DBEditEmail
+            end
+            object Label19: TLabel
+              Left = 627
+              Top = 44
+              Width = 74
+              Height = 13
+              Caption = 'Tipo de Usuario'
+              FocusControl = DBEditEmail
+            end
+            object DBEditNome: TDBEdit
+              Left = 4
+              Top = 20
+              Width = 250
+              Height = 21
+              CharCase = ecUpperCase
+              DataField = 'Nome'
+              DataSource = DMPrincipal.DSUsuarios
+              TabOrder = 0
+            end
+            object DBEditUsuario: TDBEdit
+              Left = 260
+              Top = 20
+              Width = 103
+              Height = 21
+              DataField = 'Usuario'
+              DataSource = DMPrincipal.DSUsuarios
+              TabOrder = 1
+            end
+            object DBEditSenha: TDBEdit
+              Left = 369
+              Top = 21
+              Width = 89
+              Height = 21
+              DataField = 'Senha'
+              DataSource = DMPrincipal.DSUsuarios
+              PasswordChar = '*'
+              TabOrder = 2
+            end
+            object DBEditEndereco: TDBEdit
+              Left = 464
+              Top = 21
+              Width = 347
+              Height = 21
+              DataField = 'Endereco'
+              DataSource = DMPrincipal.DSUsuarios
+              TabOrder = 3
+            end
+            object DBEditCidade: TDBEdit
+              Left = 4
+              Top = 60
+              Width = 150
+              Height = 21
+              DataField = 'Cidade'
+              DataSource = DMPrincipal.DSUsuarios
+              TabOrder = 4
+            end
+            object DBEditUF: TDBEdit
+              Left = 160
+              Top = 60
+              Width = 30
+              Height = 21
+              DataField = 'UF'
+              DataSource = DMPrincipal.DSUsuarios
+              TabOrder = 5
+            end
+            object DBEditTelefone: TDBEdit
+              Left = 196
+              Top = 60
+              Width = 100
+              Height = 21
+              DataField = 'Telefone'
+              DataSource = DMPrincipal.DSUsuarios
+              TabOrder = 6
+            end
+            object DBEditCelular: TDBEdit
+              Left = 302
+              Top = 60
+              Width = 101
+              Height = 21
+              DataField = 'Celular'
+              DataSource = DMPrincipal.DSUsuarios
+              TabOrder = 7
+            end
+            object DBEditEmail: TDBEdit
+              Left = 409
+              Top = 60
+              Width = 212
+              Height = 21
+              DataField = 'Email'
+              DataSource = DMPrincipal.DSUsuarios
+              TabOrder = 8
+            end
+            object DBLookupComboBoxTipoUsuario: TDBLookupComboBox
+              Left = 627
+              Top = 60
+              Width = 184
+              Height = 21
+              DataField = 'TipoUsuario_id'
+              DataSource = DMPrincipal.DSUsuarios
+              KeyField = 'id'
+              ListField = 'TipoUsuario'
+              ListSource = DMPrincipal.DSTipoUsuarios
+              TabOrder = 9
+            end
+            object DBRadioGroupNivelAcesso: TDBRadioGroup
+              Left = 5
+              Top = 87
+              Width = 616
+              Height = 38
+              Caption = 'Nivel de Acesso'
+              Columns = 4
+              DataField = 'NivelAcesso'
+              DataSource = DMPrincipal.DSUsuarios
+              Items.Strings = (
+                'Super usu'#225'rio'
+                'Administrador'
+                'Gerente'
+                'Usuario')
+              ParentBackground = True
+              TabOrder = 10
+              Values.Strings = (
+                '0'
+                '1'
+                '2'
+                '3')
+            end
+          end
+        end
+      end
+      object TbsTipoUsuarios: TTabSheet
+        Caption = 'TIPO DE USU'#193'RIOS'
+        ImageIndex = 16
+        object Panel8: TPanel
+          Left = 0
+          Top = 30
+          Width = 831
+          Height = 196
+          Align = alClient
+          TabOrder = 0
+          object DBGridTipoUsuario: TDBGrid
+            Left = 1
+            Top = 1
+            Width = 829
+            Height = 194
+            Align = alClient
+            DataSource = DMPrincipal.DSTipoUsuarios
+            Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+            ReadOnly = True
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            OnDblClick = BitBtnTipoUsuarioEditarClick
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'TipoUsuario'
+                Title.Caption = 'Tipo Usuario'
+                Visible = True
+              end>
+          end
+        end
+        object Panel9: TPanel
+          Left = 0
+          Top = 226
+          Width = 831
+          Height = 112
+          Align = alBottom
+          TabOrder = 1
+          object ToolBar2: TToolBar
+            Left = 1
+            Top = 1
+            Width = 829
+            Height = 40
+            ButtonHeight = 41
+            Caption = 'ToolBar1'
+            TabOrder = 0
+            object BitBtnTipoUsuarioInserir: TBitBtn
+              Left = 0
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'INSERIR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF0041924E233D8F497D3A8C44DB368940F332873CF32F84
+                37DB2C81337D287F3023FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF0049995853459653E6419950FF7DC28FFF96D0A6FF96CFA6FF78BE
+                89FF368D42FF2C8134E6297F3053FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00519F61534D9C5DF464B478FFA8DBB5FF87CC98FF66BC7DFF64BA7CFF86CB
+                98FFA5D9B4FF58AA6BFF2C8134F4297F3053FFFFFF00FFFFFF00FFFFFF0059A6
+                6B2256A366E56AB97DFFA8DBB2FF60BC77FF5CBA73FF59B870FF59B56FFF58B5
+                6FFF5BB774FFA5D9B3FF5AAA6CFF2C8234E5297F3022FFFFFF00FFFFFF005DA9
+                707E53AB68FFAADDB4FF64C179FF5FBE71FF60BC77FFFFFFFFFFFFFFFFFF59B8
+                70FF58B56EFF5CB774FFA6DAB4FF388F43FF2C82347EFFFFFF00FFFFFF0061AC
+                75DB8ACC98FF89D396FF6BC67AFF63C170FF55AB65FFFFFFFFFFFFFFFFFF59B8
+                70FF59B870FF5BB972FF85CC97FF7BBE8DFF308539DBFFFFFF00FFFFFF0065AF
+                7AF6A9DDB3FF7DCF8AFF75CC81FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF59B870FF67BE7DFF9CD4ABFF34883DF6FFFFFF00FFFFFF0069B2
+                7EF6B6E2BEFF8BD597FF7AC986FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF59B870FF69C17EFF9DD4AAFF388B42F6FFFFFF00FFFFFF006DB5
+                83DBACDDB6FFA6DFAFFF81CB8CFF7CC986FF6EBD79FFFFFFFFFFFFFFFFFF5BAC
+                6AFF60BC77FF5CBA73FF8BD199FF80C592FF3C8E47DBFFFFFF00FFFFFF0070B8
+                877E85C797FFD2EED7FF95D9A0FF8AD394FF7FC889FFFFFFFFFFFFFFFFFF79CD
+                85FF6BC37CFF6FC77EFFACDFB5FF459E57FF40914C7EFFFFFF00FFFFFF0073BA
+                8A2270B887E5AADAB7FFD8F1DCFF92D89DFF88CD93FF84CC8EFF8BD496FF8AD4
+                95FF83D28EFFAFE0B7FF6BB97DFF489856E544945122FFFFFF00FFFFFF00FFFF
+                FF0073BB8B5370B887F4AFDCBBFFDCF2E0FFB6E4BDFF9BDBA5FF96D9A0FFA5DF
+                AFFFC0E8C5FF79C28AFF509E5FF44C9B5B53FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF0073BB8B5371B887E694CEA4FFC3E6CBFFCFEBD4FFC9E9CEFFAFDD
+                B8FF6DB97FFF58A569E654A16553FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF0074BB8B2371B9887D6EB684DB6AB380F367B17CF363AE
+                77DB60AB737D5CA86E23FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 3
+              OnClick = BitBtnTipoUsuarioInserirClick
+            end
+            object BitBtnTipoUsuarioEditar: TBitBtn
+              Left = 75
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'EDITAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00196B3788196B37F2196B37FF196B37F2196B3788FFFFFF00FFFFFF001340
+                58FF15425EFF25699CFF2C76B4FF3B8BBAADFFFFFF00FFFFFF00FFFFFF00196B
+                3784288C53FF64BA8DFF95D2B2FF64BA8DFF288C53FF196B378CFFFFFF001242
+                59FF5D9CD4FFA6CFF5FFA9CFECFF488BC1FF2C76B4FFFFFFFF00FFFFFF001B6C
+                39F762BA8BFF60BA87FFFFFFFFFF60B987FF67BC8FFF196B37F7FFFFFF001E6D
+                93FFCBE3F9FF61AAECFF4098E8FF1567C2FF1660AAFF2C76B4FFFFFFFF00317B
+                4CFF9CD4B6FFFFFFFFFFFFFFFFFFFFFFFFFF95D2B2FF196B37FFFFFFFF001E6D
+                93FFC8E1F2FFD1E7FAFF347DB5FF3199C3FF6DC4DCFF4A9CCFFF3483C7FF4487
+                5DF790D3B1FF92D6B1FFFFFFFFFF65BC8CFF67BC8FFF196B37F7FFFFFF002063
+                98202689B9FFB0CBE1FF67A9C8FF60DCF5FF44D6F4FF8EEEFAFF5DB4E6FF468F
+                A0FF61AB81FF95D4B4FFBAE6D0FF6ABB8FFF2D8F57FF196B378CFFFFFF00FFFF
+                FF00FFFFFF002689B9FFBEE6F2FFB3F4FCFF60DCF5FF44D6F4FF8EEEFAFF5DB4
+                E6FF4A91A5FF58946EF24F8E66FF408459F22E78497CFFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF002790BFFFC3EDF8FFB3F4FCFF60DCF5FF44D6F4FF8EEE
+                FAFF5DB4E6FF3B8FD9FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3EDF8FFB3F4FCFF60DCF5FF44D6
+                F4FF8EEEFAFF5DB4E6FF3B8FD9FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3EDF8FFB3F4FCFF60DC
+                F5FF44D6F4FF8EEEFAFF5DB4E6FF3B8FD9FFFFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3EDF8FFB3F4
+                FCFF68D9F5FF6FCFF3FF599DD0FF73ABDDFF4F91C9FFFFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3ED
+                F8FFA8E2F8FF6CAEDDFFA5CFF4FFA5CFF4FFBDDBF7FF5393CBF7FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBA
+                E4FFA7D4F4FFC5E1F8FFCCE3F9FFCCE3F9FFBDDBF7FF4F90C9FDFFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF0050A8D9FF6AA5D8FFC9E1F7FFCBE3F8FF4295CAFF3182C2AEFFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF002FBAE4094FAADBEA5093CAFD4E90C8FF2F9DD2DF35A4DE19FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 2
+              OnClick = BitBtnTipoUsuarioEditarClick
+            end
+            object BitBtnTipoUsuarioSalvar: TBitBtn
+              Left = 150
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'SALVAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000BA6A368FB969
+                35B5B86935EEB76835FFB56835FFB46734FFB26634FFB06533FFAE6433FFAC63
+                32FFAA6232FFA96132FFA86031FFA76031FEA66031F1A86131C4BA6A35DEEBC6
+                ADFFEAC5ADFFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+                F8FFFEFBF8FFFEFBF8FFFEFBF8FFC89A7CFFC79879FFA76031EDBA6B37FEEDCA
+                B3FFE0A27AFFFEFAF7FF62C088FF62C088FF62C088FF62C088FF62C088FF62C0
+                88FF62C088FF62C088FFFDF9F6FFCA8D65FFC99B7CFFA76031FEBB6C38FFEECC
+                B6FFE1A27AFFFEFAF7FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDC
+                C2FFBFDCC2FFBFDCC2FFFDF9F6FFCD9068FFCC9E81FFA86132FFBB6B38FFEFCE
+                B8FFE1A279FFFEFAF7FF62C088FF62C088FF62C088FF62C088FF62C088FF62C0
+                88FF62C088FF62C088FFFDF9F6FFCF936AFFCEA384FFAA6132FFBA6A36FFEFD0
+                BBFFE2A27AFFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+                F8FFFEFBF8FFFEFBF8FFFEFBF8FFD3966DFFD2A78AFFAB6232FFBB6A36FFF0D2
+                BEFFE2A37AFFE2A37AFFE1A37AFFE2A37BFFE1A37BFFE0A178FFDE9F77FFDD9F
+                76FFDC9D74FFD99B72FFD89971FFD69970FFD5AB8EFFAD6333FFBB6A36FFF2D5
+                C2FFE3A37AFFE3A37AFFE2A37BFFE2A37BFFE2A47BFFE1A279FFE0A178FFDEA0
+                77FFDE9E75FFDC9D74FFDA9B73FFD99B73FFDAB095FFAF6433FFBB6A36FFF2D8
+                C5FFE3A47BFFE3A37AFFE3A47AFFE2A47BFFE2A37BFFE1A37BFFE1A279FFDFA0
+                77FFDE9F76FFDD9E74FFDB9C72FFDC9D74FFDDB59AFFB16534FFBB6B36FFF4D9
+                C7FFE6A67DFFC88C64FFC98D65FFC98E67FFCB926CFFCB926DFFCA9069FFC88C
+                65FFC88C64FFC88C64FFC88C64FFDA9C74FFE1BA9FFFB36634FFBB6B36FEF4DC
+                C9FFE7A77DFFF9ECE1FFF9ECE1FFF9EDE3FFFCF4EEFFFDFAF7FFFDF7F3FFFAED
+                E5FFF7E7DBFFF7E5D9FFF6E5D8FFDEA077FFE4BEA4FFB46734FFBC6B36FAF5DD
+                CCFFE7A87EFFFAF0E8FFFAF0E8FFC98D66FFFAF0E9FFFDF8F3FFFEFAF8FFFCF4
+                EFFFF9E9DFFFF7E7DBFFF7E5D9FFE0A278FFE7C2A9FFB66835FFBC6B36F0F6DF
+                D0FFE8A87EFFFCF6F1FFFCF6F1FFC88C64FFFAF1E9FFFBF4EEFFFDFAF7FFFDF9
+                F6FFFAF0E8FFF8E8DDFFF7E6DBFFE1A37AFFEFD5C3FFB76935FEBC6B36D8F6DF
+                D1FFE9AA80FFFEFAF6FFFDFAF6FFC88C64FFFBF3EEFFFBF1EAFFFCF6F2FFFEFB
+                F8FFFCF6F1FFF9ECE2FFF8E7DBFFEED0BAFFECD0BDFFBB703EF8BC6B369BF6E0
+                D1FFF7E0D1FFFEFBF8FFFEFBF7FFFDF9F6FFFCF5F0FFFAF0EAFFFBF2EDFFFDF9
+                F6FFFDFAF7FFFBF1EBFFF8E9DFFEECD0BDFBC9895EECB5693563BC6B3671BC6B
+                3690BC6B36CCBC6B36EEBC6B36FABB6B36FEBB6B36FFBB6A36FFBB6A36FFBC6C
+                39FFBD6E3BFFBB6D3AFFBB6B38EFBB703ECBB6693554FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 1
+              OnClick = BitBtnTipoUsuarioSalvarClick
+            end
+            object BitBtnTipoUsuarioCancelar: TBitBtn
+              Left = 225
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'CANCELAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF000000F1EC0000F1FF0000F1FF0000F1FF0000EFFF0000
+                EFFF0000EDFF0000EDEDFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF000000F5EC1A20F5FF3C4CF9FF3A49F8FF3847F8FF3545F8FF3443
+                F7FF3242F7FF141BF1FF0000EDE8FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF000000F7EC1D23F9FF4453FAFF2429F9FF1212F7FF0F0FF6FF0C0CF5FF0909
+                F5FF161BF5FF3343F7FF141BF1FF0000EDE8FFFFFF00FFFFFF00FFFFFF000000
+                F9EC1F25FAFF4A58FBFF4247FBFFC9C9FDFF3B3BF9FF1313F7FF1010F6FF3333
+                F7FFC5C5FDFF3035F7FF3444F7FF141BF2FF0000EDE8FFFFFF00FFFFFF000000
+                FBFF4F5DFDFF3237FBFFCBCBFEFFF2F2FFFFEBEBFEFF3B3BF9FF3939F8FFEAEA
+                FEFFF1F1FEFFC5C5FDFF181DF6FF3343F7FF0000EFFFFFFFFF00FFFFFF000000
+                FDFF525FFDFF2828FCFF4747FCFFECECFFFFF2F2FFFFECECFFFFECECFEFFF1F1
+                FFFFEAEAFEFF3434F7FF0B0BF5FF3545F8FF0000EFFFFFFFFF00FFFFFF000000
+                FDFF5562FEFF2C2CFDFF2929FCFF4848FCFFEDEDFFFFF2F2FFFFF2F2FFFFECEC
+                FEFF3A3AF9FF1212F7FF0F0FF6FF3848F8FF0000F1FFFFFFFF00FFFFFF000000
+                FDFF5764FEFF3030FDFF2D2DFDFF4B4BFCFFEDEDFFFFF2F2FFFFF2F2FFFFECEC
+                FFFF3D3DF9FF1616F8FF1313F7FF3C4BF8FF0000F1FFFFFFFF00FFFFFF000000
+                FFFF5A67FEFF3333FEFF5050FDFFEDEDFFFFF3F3FFFFEDEDFFFFEDEDFFFFF2F2
+                FFFFECECFEFF3E3EFAFF1717F8FF3F4EF9FF0000F1FFFFFFFF00FFFFFF000000
+                FFFF5B68FFFF4347FEFFCFCFFFFFF3F3FFFFEDEDFFFF4C4CFCFF4A4AFCFFECEC
+                FFFFF2F2FFFFCACAFEFF2A2FFAFF4251FAFF0000F3FFFFFFFF00FFFFFF000000
+                FFEB262BFFFF5D6AFFFF585BFFFFCFCFFFFF5252FEFF2F2FFDFF2C2CFDFF4B4B
+                FCFFCCCCFEFF484CFBFF4957FBFF1D23F9FF0000F5EBFFFFFF00FFFFFF00FFFF
+                FF000000FFEB262BFFFF5D6AFFFF4347FFFF3434FEFF3232FEFF3030FDFF2D2D
+                FDFF383CFCFF4F5DFCFF1F25FAFF0000F7EBFFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF000000FFEB262BFFFF5C69FFFF5B68FFFF5A67FEFF5865FEFF5663
+                FEFF5461FEFF2227FCFF0000FBF2FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF000000FFEC0000FFFF0000FFFF0000FFFF0000FDFF0000
+                FDFF0000FDFF0000FDECFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 4
+              OnClick = BitBtnTipoUsuarioCancelarClick
+            end
+            object BitBtnTipoUsuarioDeletar: TBitBtn
+              Left = 300
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'DELETAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF003F54C3233A50C27D3853BEDB3551BDF3304BBCF32E4E
+                B8DB2B4CB77D2748B523FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF004658C8534255C6E63C52CCFF757AE8FF8F92EEFF8F92EEFF7178
+                E4FF334DC1FF2B4AB7E6294BB553FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF004D5ACD534959CBF45C65E0FFA1A6F5FF7E86EFFF5B63E9FF595DE7FF7D84
+                EEFF9EA0F4FF515DD7FF2B4AB7F4294BB553FFFFFF00FFFFFF00FFFFFF00545F
+                D2225361CFE5616BE3FFA1ACF5FF545FECFF505CEAFF4D59E9FF4E59E6FF4C56
+                E6FF5056E6FF9EA2F4FF5460D6FF2A4AB8E5294BB522FFFFFF00FFFFFF005860
+                D47E4B56DBFFA2ABF6FF5664F0FF5266EEFF4D59E9FF4D59E9FF4D59E9FF4D59
+                E9FF4C58E6FF525AE6FF9FA3F5FF3450C4FF2A4AB87EFFFFFF00FFFFFF005C62
+                D7DB818CEEFF7E91F7FF5D73F3FF4D59E9FF4D59E9FF4D59E9FF4D59E9FF4D59
+                E9FF4D59E9FF4F5BE9FF7B83F0FF757BE2FF2E4BBADBFFFFFF00FFFFFF005F63
+                DAF6A1ABF7FF7086F8FF6882F6FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF4D59E9FF5C66EAFF969CF1FF3250BCF6FFFFFF00FFFFFF006469
+                DBF6AFB9F9FF7F93FAFF7085F0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF4D59E9FF5E6AEEFF969DF1FF364FBEF6FFFFFF00FFFFFF00676A
+                DEDBA5AFF5FF9DABFAFF778CF0FF545FECFF545FECFF545FECFF545FECFF545F
+                ECFF545FECFF6377F2FF818EF4FF787FE9FF3A53C0DBFFFFFF00FFFFFF006A69
+                E07E7D83EAFFCDD4FCFF8B9DFAFF7E93F7FF758AEEFF6C84F6FF6C84F6FF6C84
+                F6FF6C84F6FF6379F3FFA4AFF8FF3E4FD0FF3E54C27EFFFFFF00FFFFFF006C6C
+                E1226A69E0E5A3A7F3FFD4DBFDFF879AFAFF7F91F0FF7A8EF1FF7F94F8FF7E92
+                F9FF768CF8FFA8B6F8FF636EE3FF4557C7E54156C522FFFFFF00FFFFFF00FFFF
+                FF006D6CE3536A69E0F4AAADF2FFD8DCFDFFAEBAFAFF91A3FAFF8B9DFAFF9CA9
+                FBFFBAC7FCFF707BE9FF4C5BCCF44858CA53FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF006D6CE3536A6ADFE68E93EDFFBEC3F8FFCCD3F9FFC4CBF9FFAAB4
+                F4FF6670E2FF535ED1E6505DCE53FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF006D6DE2236B6AE17D686ADDDB6364DCF36164DAF35D63
+                D9DB5B63D67D5862D423FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 0
+              OnClick = BitBtnTipoUsuarioDeletarClick
+            end
+          end
+          object PanelTipoUsuario: TPanel
+            Left = 1
+            Top = 41
+            Width = 829
+            Height = 70
+            Align = alClient
+            Enabled = False
+            TabOrder = 1
+            object Label6: TLabel
+              Left = 7
+              Top = 7
+              Width = 77
+              Height = 13
+              Caption = 'Tipo de usu'#225'rio:'
+            end
+            object DBEditTipoUsuario: TDBEdit
+              Left = 8
+              Top = 26
+              Width = 367
+              Height = 21
+              CharCase = ecUpperCase
+              DataField = 'TipoUsuario'
+              DataSource = DMPrincipal.DSTipoUsuarios
+              TabOrder = 0
+            end
+          end
+        end
+        object Panel10: TPanel
+          Left = 0
+          Top = 0
+          Width = 831
+          Height = 30
+          Align = alTop
+          TabOrder = 2
+          object Label2: TLabel
+            Left = 1
+            Top = 1
+            Width = 86
+            Height = 28
+            Align = alLeft
+            Caption = '  BUSCAR:  '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            ExplicitHeight = 19
+          end
+          object EdtBuscaTipoUsuario: TEdit
+            Left = 87
+            Top = 1
+            Width = 743
+            Height = 28
+            Align = alClient
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 0
+            OnChange = EdtBuscaTipoUsuarioChange
+            ExplicitHeight = 27
+          end
+        end
+      end
+      object TbsSituacaoChamados: TTabSheet
+        Caption = 'SITUA'#199#195'O DE CHAMADOS'
+        ImageIndex = 2
+        object Panel12: TPanel
+          Left = 0
+          Top = 30
+          Width = 831
+          Height = 202
+          Align = alClient
+          TabOrder = 0
+          object DBGridSituacaoChamado: TDBGrid
+            Left = 1
+            Top = 1
+            Width = 829
+            Height = 200
+            Align = alClient
+            DataSource = DMPrincipal.DSSituacaoChamados
+            Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+            ReadOnly = True
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            OnDblClick = BitBtnSituacaoChamadosEditarClick
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'Situacao'
+                Width = 361
+                Visible = True
+              end>
+          end
+        end
+        object Panel13: TPanel
+          Left = 0
+          Top = 232
+          Width = 831
+          Height = 106
+          Align = alBottom
+          TabOrder = 1
+          object ToolBar3: TToolBar
+            Left = 1
+            Top = 1
+            Width = 829
+            Height = 40
+            ButtonHeight = 41
+            Caption = 'ToolBar1'
+            TabOrder = 0
+            object BitBtnSituacaoChamadosInserir: TBitBtn
+              Left = 0
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'INSERIR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF0041924E233D8F497D3A8C44DB368940F332873CF32F84
+                37DB2C81337D287F3023FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF0049995853459653E6419950FF7DC28FFF96D0A6FF96CFA6FF78BE
+                89FF368D42FF2C8134E6297F3053FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00519F61534D9C5DF464B478FFA8DBB5FF87CC98FF66BC7DFF64BA7CFF86CB
+                98FFA5D9B4FF58AA6BFF2C8134F4297F3053FFFFFF00FFFFFF00FFFFFF0059A6
+                6B2256A366E56AB97DFFA8DBB2FF60BC77FF5CBA73FF59B870FF59B56FFF58B5
+                6FFF5BB774FFA5D9B3FF5AAA6CFF2C8234E5297F3022FFFFFF00FFFFFF005DA9
+                707E53AB68FFAADDB4FF64C179FF5FBE71FF60BC77FFFFFFFFFFFFFFFFFF59B8
+                70FF58B56EFF5CB774FFA6DAB4FF388F43FF2C82347EFFFFFF00FFFFFF0061AC
+                75DB8ACC98FF89D396FF6BC67AFF63C170FF55AB65FFFFFFFFFFFFFFFFFF59B8
+                70FF59B870FF5BB972FF85CC97FF7BBE8DFF308539DBFFFFFF00FFFFFF0065AF
+                7AF6A9DDB3FF7DCF8AFF75CC81FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF59B870FF67BE7DFF9CD4ABFF34883DF6FFFFFF00FFFFFF0069B2
+                7EF6B6E2BEFF8BD597FF7AC986FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF59B870FF69C17EFF9DD4AAFF388B42F6FFFFFF00FFFFFF006DB5
+                83DBACDDB6FFA6DFAFFF81CB8CFF7CC986FF6EBD79FFFFFFFFFFFFFFFFFF5BAC
+                6AFF60BC77FF5CBA73FF8BD199FF80C592FF3C8E47DBFFFFFF00FFFFFF0070B8
+                877E85C797FFD2EED7FF95D9A0FF8AD394FF7FC889FFFFFFFFFFFFFFFFFF79CD
+                85FF6BC37CFF6FC77EFFACDFB5FF459E57FF40914C7EFFFFFF00FFFFFF0073BA
+                8A2270B887E5AADAB7FFD8F1DCFF92D89DFF88CD93FF84CC8EFF8BD496FF8AD4
+                95FF83D28EFFAFE0B7FF6BB97DFF489856E544945122FFFFFF00FFFFFF00FFFF
+                FF0073BB8B5370B887F4AFDCBBFFDCF2E0FFB6E4BDFF9BDBA5FF96D9A0FFA5DF
+                AFFFC0E8C5FF79C28AFF509E5FF44C9B5B53FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF0073BB8B5371B887E694CEA4FFC3E6CBFFCFEBD4FFC9E9CEFFAFDD
+                B8FF6DB97FFF58A569E654A16553FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF0074BB8B2371B9887D6EB684DB6AB380F367B17CF363AE
+                77DB60AB737D5CA86E23FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 3
+              OnClick = BitBtnSituacaoChamadosInserirClick
+            end
+            object BitBtnSituacaoChamadosEditar: TBitBtn
+              Left = 75
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'EDITAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00196B3788196B37F2196B37FF196B37F2196B3788FFFFFF00FFFFFF001340
+                58FF15425EFF25699CFF2C76B4FF3B8BBAADFFFFFF00FFFFFF00FFFFFF00196B
+                3784288C53FF64BA8DFF95D2B2FF64BA8DFF288C53FF196B378CFFFFFF001242
+                59FF5D9CD4FFA6CFF5FFA9CFECFF488BC1FF2C76B4FFFFFFFF00FFFFFF001B6C
+                39F762BA8BFF60BA87FFFFFFFFFF60B987FF67BC8FFF196B37F7FFFFFF001E6D
+                93FFCBE3F9FF61AAECFF4098E8FF1567C2FF1660AAFF2C76B4FFFFFFFF00317B
+                4CFF9CD4B6FFFFFFFFFFFFFFFFFFFFFFFFFF95D2B2FF196B37FFFFFFFF001E6D
+                93FFC8E1F2FFD1E7FAFF347DB5FF3199C3FF6DC4DCFF4A9CCFFF3483C7FF4487
+                5DF790D3B1FF92D6B1FFFFFFFFFF65BC8CFF67BC8FFF196B37F7FFFFFF002063
+                98202689B9FFB0CBE1FF67A9C8FF60DCF5FF44D6F4FF8EEEFAFF5DB4E6FF468F
+                A0FF61AB81FF95D4B4FFBAE6D0FF6ABB8FFF2D8F57FF196B378CFFFFFF00FFFF
+                FF00FFFFFF002689B9FFBEE6F2FFB3F4FCFF60DCF5FF44D6F4FF8EEEFAFF5DB4
+                E6FF4A91A5FF58946EF24F8E66FF408459F22E78497CFFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF002790BFFFC3EDF8FFB3F4FCFF60DCF5FF44D6F4FF8EEE
+                FAFF5DB4E6FF3B8FD9FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3EDF8FFB3F4FCFF60DCF5FF44D6
+                F4FF8EEEFAFF5DB4E6FF3B8FD9FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3EDF8FFB3F4FCFF60DC
+                F5FF44D6F4FF8EEEFAFF5DB4E6FF3B8FD9FFFFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3EDF8FFB3F4
+                FCFF68D9F5FF6FCFF3FF599DD0FF73ABDDFF4F91C9FFFFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3ED
+                F8FFA8E2F8FF6CAEDDFFA5CFF4FFA5CFF4FFBDDBF7FF5393CBF7FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBA
+                E4FFA7D4F4FFC5E1F8FFCCE3F9FFCCE3F9FFBDDBF7FF4F90C9FDFFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF0050A8D9FF6AA5D8FFC9E1F7FFCBE3F8FF4295CAFF3182C2AEFFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF002FBAE4094FAADBEA5093CAFD4E90C8FF2F9DD2DF35A4DE19FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 2
+              OnClick = BitBtnSituacaoChamadosEditarClick
+            end
+            object BitBtnSituacaoChamadosSalvar: TBitBtn
+              Left = 150
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'SALVAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000BA6A368FB969
+                35B5B86935EEB76835FFB56835FFB46734FFB26634FFB06533FFAE6433FFAC63
+                32FFAA6232FFA96132FFA86031FFA76031FEA66031F1A86131C4BA6A35DEEBC6
+                ADFFEAC5ADFFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+                F8FFFEFBF8FFFEFBF8FFFEFBF8FFC89A7CFFC79879FFA76031EDBA6B37FEEDCA
+                B3FFE0A27AFFFEFAF7FF62C088FF62C088FF62C088FF62C088FF62C088FF62C0
+                88FF62C088FF62C088FFFDF9F6FFCA8D65FFC99B7CFFA76031FEBB6C38FFEECC
+                B6FFE1A27AFFFEFAF7FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDC
+                C2FFBFDCC2FFBFDCC2FFFDF9F6FFCD9068FFCC9E81FFA86132FFBB6B38FFEFCE
+                B8FFE1A279FFFEFAF7FF62C088FF62C088FF62C088FF62C088FF62C088FF62C0
+                88FF62C088FF62C088FFFDF9F6FFCF936AFFCEA384FFAA6132FFBA6A36FFEFD0
+                BBFFE2A27AFFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+                F8FFFEFBF8FFFEFBF8FFFEFBF8FFD3966DFFD2A78AFFAB6232FFBB6A36FFF0D2
+                BEFFE2A37AFFE2A37AFFE1A37AFFE2A37BFFE1A37BFFE0A178FFDE9F77FFDD9F
+                76FFDC9D74FFD99B72FFD89971FFD69970FFD5AB8EFFAD6333FFBB6A36FFF2D5
+                C2FFE3A37AFFE3A37AFFE2A37BFFE2A37BFFE2A47BFFE1A279FFE0A178FFDEA0
+                77FFDE9E75FFDC9D74FFDA9B73FFD99B73FFDAB095FFAF6433FFBB6A36FFF2D8
+                C5FFE3A47BFFE3A37AFFE3A47AFFE2A47BFFE2A37BFFE1A37BFFE1A279FFDFA0
+                77FFDE9F76FFDD9E74FFDB9C72FFDC9D74FFDDB59AFFB16534FFBB6B36FFF4D9
+                C7FFE6A67DFFC88C64FFC98D65FFC98E67FFCB926CFFCB926DFFCA9069FFC88C
+                65FFC88C64FFC88C64FFC88C64FFDA9C74FFE1BA9FFFB36634FFBB6B36FEF4DC
+                C9FFE7A77DFFF9ECE1FFF9ECE1FFF9EDE3FFFCF4EEFFFDFAF7FFFDF7F3FFFAED
+                E5FFF7E7DBFFF7E5D9FFF6E5D8FFDEA077FFE4BEA4FFB46734FFBC6B36FAF5DD
+                CCFFE7A87EFFFAF0E8FFFAF0E8FFC98D66FFFAF0E9FFFDF8F3FFFEFAF8FFFCF4
+                EFFFF9E9DFFFF7E7DBFFF7E5D9FFE0A278FFE7C2A9FFB66835FFBC6B36F0F6DF
+                D0FFE8A87EFFFCF6F1FFFCF6F1FFC88C64FFFAF1E9FFFBF4EEFFFDFAF7FFFDF9
+                F6FFFAF0E8FFF8E8DDFFF7E6DBFFE1A37AFFEFD5C3FFB76935FEBC6B36D8F6DF
+                D1FFE9AA80FFFEFAF6FFFDFAF6FFC88C64FFFBF3EEFFFBF1EAFFFCF6F2FFFEFB
+                F8FFFCF6F1FFF9ECE2FFF8E7DBFFEED0BAFFECD0BDFFBB703EF8BC6B369BF6E0
+                D1FFF7E0D1FFFEFBF8FFFEFBF7FFFDF9F6FFFCF5F0FFFAF0EAFFFBF2EDFFFDF9
+                F6FFFDFAF7FFFBF1EBFFF8E9DFFEECD0BDFBC9895EECB5693563BC6B3671BC6B
+                3690BC6B36CCBC6B36EEBC6B36FABB6B36FEBB6B36FFBB6A36FFBB6A36FFBC6C
+                39FFBD6E3BFFBB6D3AFFBB6B38EFBB703ECBB6693554FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 1
+              OnClick = BitBtnSituacaoChamadosSalvarClick
+            end
+            object BitBtnSituacaoChamadosCancelar: TBitBtn
+              Left = 225
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'CANCELAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF000000F1EC0000F1FF0000F1FF0000F1FF0000EFFF0000
+                EFFF0000EDFF0000EDEDFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF000000F5EC1A20F5FF3C4CF9FF3A49F8FF3847F8FF3545F8FF3443
+                F7FF3242F7FF141BF1FF0000EDE8FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF000000F7EC1D23F9FF4453FAFF2429F9FF1212F7FF0F0FF6FF0C0CF5FF0909
+                F5FF161BF5FF3343F7FF141BF1FF0000EDE8FFFFFF00FFFFFF00FFFFFF000000
+                F9EC1F25FAFF4A58FBFF4247FBFFC9C9FDFF3B3BF9FF1313F7FF1010F6FF3333
+                F7FFC5C5FDFF3035F7FF3444F7FF141BF2FF0000EDE8FFFFFF00FFFFFF000000
+                FBFF4F5DFDFF3237FBFFCBCBFEFFF2F2FFFFEBEBFEFF3B3BF9FF3939F8FFEAEA
+                FEFFF1F1FEFFC5C5FDFF181DF6FF3343F7FF0000EFFFFFFFFF00FFFFFF000000
+                FDFF525FFDFF2828FCFF4747FCFFECECFFFFF2F2FFFFECECFFFFECECFEFFF1F1
+                FFFFEAEAFEFF3434F7FF0B0BF5FF3545F8FF0000EFFFFFFFFF00FFFFFF000000
+                FDFF5562FEFF2C2CFDFF2929FCFF4848FCFFEDEDFFFFF2F2FFFFF2F2FFFFECEC
+                FEFF3A3AF9FF1212F7FF0F0FF6FF3848F8FF0000F1FFFFFFFF00FFFFFF000000
+                FDFF5764FEFF3030FDFF2D2DFDFF4B4BFCFFEDEDFFFFF2F2FFFFF2F2FFFFECEC
+                FFFF3D3DF9FF1616F8FF1313F7FF3C4BF8FF0000F1FFFFFFFF00FFFFFF000000
+                FFFF5A67FEFF3333FEFF5050FDFFEDEDFFFFF3F3FFFFEDEDFFFFEDEDFFFFF2F2
+                FFFFECECFEFF3E3EFAFF1717F8FF3F4EF9FF0000F1FFFFFFFF00FFFFFF000000
+                FFFF5B68FFFF4347FEFFCFCFFFFFF3F3FFFFEDEDFFFF4C4CFCFF4A4AFCFFECEC
+                FFFFF2F2FFFFCACAFEFF2A2FFAFF4251FAFF0000F3FFFFFFFF00FFFFFF000000
+                FFEB262BFFFF5D6AFFFF585BFFFFCFCFFFFF5252FEFF2F2FFDFF2C2CFDFF4B4B
+                FCFFCCCCFEFF484CFBFF4957FBFF1D23F9FF0000F5EBFFFFFF00FFFFFF00FFFF
+                FF000000FFEB262BFFFF5D6AFFFF4347FFFF3434FEFF3232FEFF3030FDFF2D2D
+                FDFF383CFCFF4F5DFCFF1F25FAFF0000F7EBFFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF000000FFEB262BFFFF5C69FFFF5B68FFFF5A67FEFF5865FEFF5663
+                FEFF5461FEFF2227FCFF0000FBF2FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF000000FFEC0000FFFF0000FFFF0000FFFF0000FDFF0000
+                FDFF0000FDFF0000FDECFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 4
+              OnClick = BitBtnSituacaoChamadosCancelarClick
+            end
+            object BitBtnSituacaoChamadosDeletar: TBitBtn
+              Left = 300
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'DELETAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF003F54C3233A50C27D3853BEDB3551BDF3304BBCF32E4E
+                B8DB2B4CB77D2748B523FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF004658C8534255C6E63C52CCFF757AE8FF8F92EEFF8F92EEFF7178
+                E4FF334DC1FF2B4AB7E6294BB553FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF004D5ACD534959CBF45C65E0FFA1A6F5FF7E86EFFF5B63E9FF595DE7FF7D84
+                EEFF9EA0F4FF515DD7FF2B4AB7F4294BB553FFFFFF00FFFFFF00FFFFFF00545F
+                D2225361CFE5616BE3FFA1ACF5FF545FECFF505CEAFF4D59E9FF4E59E6FF4C56
+                E6FF5056E6FF9EA2F4FF5460D6FF2A4AB8E5294BB522FFFFFF00FFFFFF005860
+                D47E4B56DBFFA2ABF6FF5664F0FF5266EEFF4D59E9FF4D59E9FF4D59E9FF4D59
+                E9FF4C58E6FF525AE6FF9FA3F5FF3450C4FF2A4AB87EFFFFFF00FFFFFF005C62
+                D7DB818CEEFF7E91F7FF5D73F3FF4D59E9FF4D59E9FF4D59E9FF4D59E9FF4D59
+                E9FF4D59E9FF4F5BE9FF7B83F0FF757BE2FF2E4BBADBFFFFFF00FFFFFF005F63
+                DAF6A1ABF7FF7086F8FF6882F6FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF4D59E9FF5C66EAFF969CF1FF3250BCF6FFFFFF00FFFFFF006469
+                DBF6AFB9F9FF7F93FAFF7085F0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF4D59E9FF5E6AEEFF969DF1FF364FBEF6FFFFFF00FFFFFF00676A
+                DEDBA5AFF5FF9DABFAFF778CF0FF545FECFF545FECFF545FECFF545FECFF545F
+                ECFF545FECFF6377F2FF818EF4FF787FE9FF3A53C0DBFFFFFF00FFFFFF006A69
+                E07E7D83EAFFCDD4FCFF8B9DFAFF7E93F7FF758AEEFF6C84F6FF6C84F6FF6C84
+                F6FF6C84F6FF6379F3FFA4AFF8FF3E4FD0FF3E54C27EFFFFFF00FFFFFF006C6C
+                E1226A69E0E5A3A7F3FFD4DBFDFF879AFAFF7F91F0FF7A8EF1FF7F94F8FF7E92
+                F9FF768CF8FFA8B6F8FF636EE3FF4557C7E54156C522FFFFFF00FFFFFF00FFFF
+                FF006D6CE3536A69E0F4AAADF2FFD8DCFDFFAEBAFAFF91A3FAFF8B9DFAFF9CA9
+                FBFFBAC7FCFF707BE9FF4C5BCCF44858CA53FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF006D6CE3536A6ADFE68E93EDFFBEC3F8FFCCD3F9FFC4CBF9FFAAB4
+                F4FF6670E2FF535ED1E6505DCE53FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF006D6DE2236B6AE17D686ADDDB6364DCF36164DAF35D63
+                D9DB5B63D67D5862D423FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 0
+              OnClick = BitBtnSituacaoChamadosDeletarClick
+            end
+          end
+          object PanelSituacaoChamados: TPanel
+            Left = 1
+            Top = 41
+            Width = 829
+            Height = 64
+            Align = alClient
+            Enabled = False
+            TabOrder = 1
+            object Label7: TLabel
+              Left = 7
+              Top = 3
+              Width = 45
+              Height = 13
+              Caption = 'Situa'#231#227'o:'
+            end
+            object DBEditSituacaoChamado: TDBEdit
+              Left = 8
+              Top = 20
+              Width = 367
+              Height = 21
+              CharCase = ecUpperCase
+              DataField = 'Situacao'
+              DataSource = DMPrincipal.DSSituacaoChamados
+              TabOrder = 0
+            end
+          end
+        end
+        object Panel14: TPanel
+          Left = 0
+          Top = 0
+          Width = 831
+          Height = 30
+          Align = alTop
+          TabOrder = 2
+          object Label3: TLabel
+            Left = 1
+            Top = 1
+            Width = 86
+            Height = 28
+            Align = alLeft
+            Caption = '  BUSCAR:  '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            ExplicitHeight = 19
+          end
+          object EdtBuscaSituacaoChamado: TEdit
+            Left = 87
+            Top = 1
+            Width = 743
+            Height = 28
+            Align = alClient
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 0
+            OnChange = EdtBuscaSituacaoChamadoChange
+            ExplicitHeight = 27
+          end
+        end
+      end
+      object TbsTiposChamados: TTabSheet
+        Caption = 'TIPOS DE CHAMADOS'
+        ImageIndex = 2
+        object Panel16: TPanel
+          Left = 0
+          Top = 30
+          Width = 831
+          Height = 202
+          Align = alClient
+          TabOrder = 0
+          object DBGridTipoChamado: TDBGrid
+            Left = 1
+            Top = 1
+            Width = 829
+            Height = 200
+            Align = alClient
+            DataSource = DMPrincipal.DSTipoChamados
+            Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+            ReadOnly = True
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            OnDblClick = BitBtnSituacaoChamadosEditarClick
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'TipoChamado'
+                Title.Caption = 'Tipo de Chamado'
+                Visible = True
+              end>
+          end
+        end
+        object Panel17: TPanel
+          Left = 0
+          Top = 232
+          Width = 831
+          Height = 106
+          Align = alBottom
+          TabOrder = 1
+          object ToolBar4: TToolBar
+            Left = 1
+            Top = 1
+            Width = 829
+            Height = 40
+            ButtonHeight = 41
+            Caption = 'ToolBar1'
+            TabOrder = 0
+            object BitBtnTipoChamadoInserir: TBitBtn
+              Left = 0
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'INSERIR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF0041924E233D8F497D3A8C44DB368940F332873CF32F84
+                37DB2C81337D287F3023FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF0049995853459653E6419950FF7DC28FFF96D0A6FF96CFA6FF78BE
+                89FF368D42FF2C8134E6297F3053FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00519F61534D9C5DF464B478FFA8DBB5FF87CC98FF66BC7DFF64BA7CFF86CB
+                98FFA5D9B4FF58AA6BFF2C8134F4297F3053FFFFFF00FFFFFF00FFFFFF0059A6
+                6B2256A366E56AB97DFFA8DBB2FF60BC77FF5CBA73FF59B870FF59B56FFF58B5
+                6FFF5BB774FFA5D9B3FF5AAA6CFF2C8234E5297F3022FFFFFF00FFFFFF005DA9
+                707E53AB68FFAADDB4FF64C179FF5FBE71FF60BC77FFFFFFFFFFFFFFFFFF59B8
+                70FF58B56EFF5CB774FFA6DAB4FF388F43FF2C82347EFFFFFF00FFFFFF0061AC
+                75DB8ACC98FF89D396FF6BC67AFF63C170FF55AB65FFFFFFFFFFFFFFFFFF59B8
+                70FF59B870FF5BB972FF85CC97FF7BBE8DFF308539DBFFFFFF00FFFFFF0065AF
+                7AF6A9DDB3FF7DCF8AFF75CC81FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF59B870FF67BE7DFF9CD4ABFF34883DF6FFFFFF00FFFFFF0069B2
+                7EF6B6E2BEFF8BD597FF7AC986FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF59B870FF69C17EFF9DD4AAFF388B42F6FFFFFF00FFFFFF006DB5
+                83DBACDDB6FFA6DFAFFF81CB8CFF7CC986FF6EBD79FFFFFFFFFFFFFFFFFF5BAC
+                6AFF60BC77FF5CBA73FF8BD199FF80C592FF3C8E47DBFFFFFF00FFFFFF0070B8
+                877E85C797FFD2EED7FF95D9A0FF8AD394FF7FC889FFFFFFFFFFFFFFFFFF79CD
+                85FF6BC37CFF6FC77EFFACDFB5FF459E57FF40914C7EFFFFFF00FFFFFF0073BA
+                8A2270B887E5AADAB7FFD8F1DCFF92D89DFF88CD93FF84CC8EFF8BD496FF8AD4
+                95FF83D28EFFAFE0B7FF6BB97DFF489856E544945122FFFFFF00FFFFFF00FFFF
+                FF0073BB8B5370B887F4AFDCBBFFDCF2E0FFB6E4BDFF9BDBA5FF96D9A0FFA5DF
+                AFFFC0E8C5FF79C28AFF509E5FF44C9B5B53FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF0073BB8B5371B887E694CEA4FFC3E6CBFFCFEBD4FFC9E9CEFFAFDD
+                B8FF6DB97FFF58A569E654A16553FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF0074BB8B2371B9887D6EB684DB6AB380F367B17CF363AE
+                77DB60AB737D5CA86E23FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 3
+              OnClick = BitBtnTipoChamadoInserirClick
+            end
+            object BitBtnTipoChamadoEditar: TBitBtn
+              Left = 75
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'EDITAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00196B3788196B37F2196B37FF196B37F2196B3788FFFFFF00FFFFFF001340
+                58FF15425EFF25699CFF2C76B4FF3B8BBAADFFFFFF00FFFFFF00FFFFFF00196B
+                3784288C53FF64BA8DFF95D2B2FF64BA8DFF288C53FF196B378CFFFFFF001242
+                59FF5D9CD4FFA6CFF5FFA9CFECFF488BC1FF2C76B4FFFFFFFF00FFFFFF001B6C
+                39F762BA8BFF60BA87FFFFFFFFFF60B987FF67BC8FFF196B37F7FFFFFF001E6D
+                93FFCBE3F9FF61AAECFF4098E8FF1567C2FF1660AAFF2C76B4FFFFFFFF00317B
+                4CFF9CD4B6FFFFFFFFFFFFFFFFFFFFFFFFFF95D2B2FF196B37FFFFFFFF001E6D
+                93FFC8E1F2FFD1E7FAFF347DB5FF3199C3FF6DC4DCFF4A9CCFFF3483C7FF4487
+                5DF790D3B1FF92D6B1FFFFFFFFFF65BC8CFF67BC8FFF196B37F7FFFFFF002063
+                98202689B9FFB0CBE1FF67A9C8FF60DCF5FF44D6F4FF8EEEFAFF5DB4E6FF468F
+                A0FF61AB81FF95D4B4FFBAE6D0FF6ABB8FFF2D8F57FF196B378CFFFFFF00FFFF
+                FF00FFFFFF002689B9FFBEE6F2FFB3F4FCFF60DCF5FF44D6F4FF8EEEFAFF5DB4
+                E6FF4A91A5FF58946EF24F8E66FF408459F22E78497CFFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF002790BFFFC3EDF8FFB3F4FCFF60DCF5FF44D6F4FF8EEE
+                FAFF5DB4E6FF3B8FD9FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3EDF8FFB3F4FCFF60DCF5FF44D6
+                F4FF8EEEFAFF5DB4E6FF3B8FD9FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3EDF8FFB3F4FCFF60DC
+                F5FF44D6F4FF8EEEFAFF5DB4E6FF3B8FD9FFFFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3EDF8FFB3F4
+                FCFF68D9F5FF6FCFF3FF599DD0FF73ABDDFF4F91C9FFFFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3ED
+                F8FFA8E2F8FF6CAEDDFFA5CFF4FFA5CFF4FFBDDBF7FF5393CBF7FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBA
+                E4FFA7D4F4FFC5E1F8FFCCE3F9FFCCE3F9FFBDDBF7FF4F90C9FDFFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF0050A8D9FF6AA5D8FFC9E1F7FFCBE3F8FF4295CAFF3182C2AEFFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF002FBAE4094FAADBEA5093CAFD4E90C8FF2F9DD2DF35A4DE19FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 2
+              OnClick = BitBtnTipoChamadoEditarClick
+            end
+            object BitBtnTipoChamadoSalvar: TBitBtn
+              Left = 150
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'SALVAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000BA6A368FB969
+                35B5B86935EEB76835FFB56835FFB46734FFB26634FFB06533FFAE6433FFAC63
+                32FFAA6232FFA96132FFA86031FFA76031FEA66031F1A86131C4BA6A35DEEBC6
+                ADFFEAC5ADFFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+                F8FFFEFBF8FFFEFBF8FFFEFBF8FFC89A7CFFC79879FFA76031EDBA6B37FEEDCA
+                B3FFE0A27AFFFEFAF7FF62C088FF62C088FF62C088FF62C088FF62C088FF62C0
+                88FF62C088FF62C088FFFDF9F6FFCA8D65FFC99B7CFFA76031FEBB6C38FFEECC
+                B6FFE1A27AFFFEFAF7FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDC
+                C2FFBFDCC2FFBFDCC2FFFDF9F6FFCD9068FFCC9E81FFA86132FFBB6B38FFEFCE
+                B8FFE1A279FFFEFAF7FF62C088FF62C088FF62C088FF62C088FF62C088FF62C0
+                88FF62C088FF62C088FFFDF9F6FFCF936AFFCEA384FFAA6132FFBA6A36FFEFD0
+                BBFFE2A27AFFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+                F8FFFEFBF8FFFEFBF8FFFEFBF8FFD3966DFFD2A78AFFAB6232FFBB6A36FFF0D2
+                BEFFE2A37AFFE2A37AFFE1A37AFFE2A37BFFE1A37BFFE0A178FFDE9F77FFDD9F
+                76FFDC9D74FFD99B72FFD89971FFD69970FFD5AB8EFFAD6333FFBB6A36FFF2D5
+                C2FFE3A37AFFE3A37AFFE2A37BFFE2A37BFFE2A47BFFE1A279FFE0A178FFDEA0
+                77FFDE9E75FFDC9D74FFDA9B73FFD99B73FFDAB095FFAF6433FFBB6A36FFF2D8
+                C5FFE3A47BFFE3A37AFFE3A47AFFE2A47BFFE2A37BFFE1A37BFFE1A279FFDFA0
+                77FFDE9F76FFDD9E74FFDB9C72FFDC9D74FFDDB59AFFB16534FFBB6B36FFF4D9
+                C7FFE6A67DFFC88C64FFC98D65FFC98E67FFCB926CFFCB926DFFCA9069FFC88C
+                65FFC88C64FFC88C64FFC88C64FFDA9C74FFE1BA9FFFB36634FFBB6B36FEF4DC
+                C9FFE7A77DFFF9ECE1FFF9ECE1FFF9EDE3FFFCF4EEFFFDFAF7FFFDF7F3FFFAED
+                E5FFF7E7DBFFF7E5D9FFF6E5D8FFDEA077FFE4BEA4FFB46734FFBC6B36FAF5DD
+                CCFFE7A87EFFFAF0E8FFFAF0E8FFC98D66FFFAF0E9FFFDF8F3FFFEFAF8FFFCF4
+                EFFFF9E9DFFFF7E7DBFFF7E5D9FFE0A278FFE7C2A9FFB66835FFBC6B36F0F6DF
+                D0FFE8A87EFFFCF6F1FFFCF6F1FFC88C64FFFAF1E9FFFBF4EEFFFDFAF7FFFDF9
+                F6FFFAF0E8FFF8E8DDFFF7E6DBFFE1A37AFFEFD5C3FFB76935FEBC6B36D8F6DF
+                D1FFE9AA80FFFEFAF6FFFDFAF6FFC88C64FFFBF3EEFFFBF1EAFFFCF6F2FFFEFB
+                F8FFFCF6F1FFF9ECE2FFF8E7DBFFEED0BAFFECD0BDFFBB703EF8BC6B369BF6E0
+                D1FFF7E0D1FFFEFBF8FFFEFBF7FFFDF9F6FFFCF5F0FFFAF0EAFFFBF2EDFFFDF9
+                F6FFFDFAF7FFFBF1EBFFF8E9DFFEECD0BDFBC9895EECB5693563BC6B3671BC6B
+                3690BC6B36CCBC6B36EEBC6B36FABB6B36FEBB6B36FFBB6A36FFBB6A36FFBC6C
+                39FFBD6E3BFFBB6D3AFFBB6B38EFBB703ECBB6693554FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 1
+              OnClick = BitBtnTipoChamadoSalvarClick
+            end
+            object BitBtnTipoChamadoCancelar: TBitBtn
+              Left = 225
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'CANCELAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF000000F1EC0000F1FF0000F1FF0000F1FF0000EFFF0000
+                EFFF0000EDFF0000EDEDFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF000000F5EC1A20F5FF3C4CF9FF3A49F8FF3847F8FF3545F8FF3443
+                F7FF3242F7FF141BF1FF0000EDE8FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF000000F7EC1D23F9FF4453FAFF2429F9FF1212F7FF0F0FF6FF0C0CF5FF0909
+                F5FF161BF5FF3343F7FF141BF1FF0000EDE8FFFFFF00FFFFFF00FFFFFF000000
+                F9EC1F25FAFF4A58FBFF4247FBFFC9C9FDFF3B3BF9FF1313F7FF1010F6FF3333
+                F7FFC5C5FDFF3035F7FF3444F7FF141BF2FF0000EDE8FFFFFF00FFFFFF000000
+                FBFF4F5DFDFF3237FBFFCBCBFEFFF2F2FFFFEBEBFEFF3B3BF9FF3939F8FFEAEA
+                FEFFF1F1FEFFC5C5FDFF181DF6FF3343F7FF0000EFFFFFFFFF00FFFFFF000000
+                FDFF525FFDFF2828FCFF4747FCFFECECFFFFF2F2FFFFECECFFFFECECFEFFF1F1
+                FFFFEAEAFEFF3434F7FF0B0BF5FF3545F8FF0000EFFFFFFFFF00FFFFFF000000
+                FDFF5562FEFF2C2CFDFF2929FCFF4848FCFFEDEDFFFFF2F2FFFFF2F2FFFFECEC
+                FEFF3A3AF9FF1212F7FF0F0FF6FF3848F8FF0000F1FFFFFFFF00FFFFFF000000
+                FDFF5764FEFF3030FDFF2D2DFDFF4B4BFCFFEDEDFFFFF2F2FFFFF2F2FFFFECEC
+                FFFF3D3DF9FF1616F8FF1313F7FF3C4BF8FF0000F1FFFFFFFF00FFFFFF000000
+                FFFF5A67FEFF3333FEFF5050FDFFEDEDFFFFF3F3FFFFEDEDFFFFEDEDFFFFF2F2
+                FFFFECECFEFF3E3EFAFF1717F8FF3F4EF9FF0000F1FFFFFFFF00FFFFFF000000
+                FFFF5B68FFFF4347FEFFCFCFFFFFF3F3FFFFEDEDFFFF4C4CFCFF4A4AFCFFECEC
+                FFFFF2F2FFFFCACAFEFF2A2FFAFF4251FAFF0000F3FFFFFFFF00FFFFFF000000
+                FFEB262BFFFF5D6AFFFF585BFFFFCFCFFFFF5252FEFF2F2FFDFF2C2CFDFF4B4B
+                FCFFCCCCFEFF484CFBFF4957FBFF1D23F9FF0000F5EBFFFFFF00FFFFFF00FFFF
+                FF000000FFEB262BFFFF5D6AFFFF4347FFFF3434FEFF3232FEFF3030FDFF2D2D
+                FDFF383CFCFF4F5DFCFF1F25FAFF0000F7EBFFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF000000FFEB262BFFFF5C69FFFF5B68FFFF5A67FEFF5865FEFF5663
+                FEFF5461FEFF2227FCFF0000FBF2FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF000000FFEC0000FFFF0000FFFF0000FFFF0000FDFF0000
+                FDFF0000FDFF0000FDECFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 4
+              OnClick = BitBtnTipoChamadoCancelarClick
+            end
+            object BitBtnDeletar: TBitBtn
+              Left = 300
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'DELETAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF003F54C3233A50C27D3853BEDB3551BDF3304BBCF32E4E
+                B8DB2B4CB77D2748B523FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF004658C8534255C6E63C52CCFF757AE8FF8F92EEFF8F92EEFF7178
+                E4FF334DC1FF2B4AB7E6294BB553FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF004D5ACD534959CBF45C65E0FFA1A6F5FF7E86EFFF5B63E9FF595DE7FF7D84
+                EEFF9EA0F4FF515DD7FF2B4AB7F4294BB553FFFFFF00FFFFFF00FFFFFF00545F
+                D2225361CFE5616BE3FFA1ACF5FF545FECFF505CEAFF4D59E9FF4E59E6FF4C56
+                E6FF5056E6FF9EA2F4FF5460D6FF2A4AB8E5294BB522FFFFFF00FFFFFF005860
+                D47E4B56DBFFA2ABF6FF5664F0FF5266EEFF4D59E9FF4D59E9FF4D59E9FF4D59
+                E9FF4C58E6FF525AE6FF9FA3F5FF3450C4FF2A4AB87EFFFFFF00FFFFFF005C62
+                D7DB818CEEFF7E91F7FF5D73F3FF4D59E9FF4D59E9FF4D59E9FF4D59E9FF4D59
+                E9FF4D59E9FF4F5BE9FF7B83F0FF757BE2FF2E4BBADBFFFFFF00FFFFFF005F63
+                DAF6A1ABF7FF7086F8FF6882F6FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF4D59E9FF5C66EAFF969CF1FF3250BCF6FFFFFF00FFFFFF006469
+                DBF6AFB9F9FF7F93FAFF7085F0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF4D59E9FF5E6AEEFF969DF1FF364FBEF6FFFFFF00FFFFFF00676A
+                DEDBA5AFF5FF9DABFAFF778CF0FF545FECFF545FECFF545FECFF545FECFF545F
+                ECFF545FECFF6377F2FF818EF4FF787FE9FF3A53C0DBFFFFFF00FFFFFF006A69
+                E07E7D83EAFFCDD4FCFF8B9DFAFF7E93F7FF758AEEFF6C84F6FF6C84F6FF6C84
+                F6FF6C84F6FF6379F3FFA4AFF8FF3E4FD0FF3E54C27EFFFFFF00FFFFFF006C6C
+                E1226A69E0E5A3A7F3FFD4DBFDFF879AFAFF7F91F0FF7A8EF1FF7F94F8FF7E92
+                F9FF768CF8FFA8B6F8FF636EE3FF4557C7E54156C522FFFFFF00FFFFFF00FFFF
+                FF006D6CE3536A69E0F4AAADF2FFD8DCFDFFAEBAFAFF91A3FAFF8B9DFAFF9CA9
+                FBFFBAC7FCFF707BE9FF4C5BCCF44858CA53FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF006D6CE3536A6ADFE68E93EDFFBEC3F8FFCCD3F9FFC4CBF9FFAAB4
+                F4FF6670E2FF535ED1E6505DCE53FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF006D6DE2236B6AE17D686ADDDB6364DCF36164DAF35D63
+                D9DB5B63D67D5862D423FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 0
+              OnClick = BitBtnDeletarClick
+            end
+          end
+          object PanelTipoChamados: TPanel
+            Left = 1
+            Top = 41
+            Width = 829
+            Height = 64
+            Align = alClient
+            Enabled = False
+            TabOrder = 1
+            object Label8: TLabel
+              Left = 7
+              Top = 3
+              Width = 87
+              Height = 13
+              Caption = 'Tipo de Chamado:'
+            end
+            object DBEditTipoChamado: TDBEdit
+              Left = 8
+              Top = 20
+              Width = 367
+              Height = 21
+              CharCase = ecUpperCase
+              DataField = 'TipoChamado'
+              DataSource = DMPrincipal.DSTipoChamados
+              TabOrder = 0
+            end
+          end
+        end
+        object Panel18: TPanel
+          Left = 0
+          Top = 0
+          Width = 831
+          Height = 30
+          Align = alTop
+          TabOrder = 2
+          object Label4: TLabel
+            Left = 1
+            Top = 1
+            Width = 86
+            Height = 28
+            Align = alLeft
+            Caption = '  BUSCAR:  '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            ExplicitHeight = 19
+          end
+          object EdtBuscaTipoChamado: TEdit
+            Left = 87
+            Top = 1
+            Width = 743
+            Height = 28
+            Align = alClient
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 0
+            OnChange = EdtBuscaTipoChamadoChange
+            ExplicitHeight = 27
+          end
+        end
+      end
+      object TbsPrioridadeChamados: TTabSheet
+        Caption = 'PRIORIDADE DE CHAMADOS'
+        ImageIndex = 2
+        object Panel20: TPanel
+          Left = 0
+          Top = 30
+          Width = 831
+          Height = 202
+          Align = alClient
+          TabOrder = 0
+          object DBGridPrioridadeChamado: TDBGrid
+            Left = 1
+            Top = 1
+            Width = 829
+            Height = 200
+            Align = alClient
+            DataSource = DMPrincipal.DSPrioridadeChamados
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'Prioridade'
+                Width = 362
+                Visible = True
+              end>
+          end
+        end
+        object Panel21: TPanel
+          Left = 0
+          Top = 232
+          Width = 831
+          Height = 106
+          Align = alBottom
+          TabOrder = 1
+          object ToolBar5: TToolBar
+            Left = 1
+            Top = 1
+            Width = 829
+            Height = 40
+            ButtonHeight = 41
+            Caption = 'ToolBar1'
+            TabOrder = 0
+            object BitBtnPrioridadeChamadoInserir: TBitBtn
+              Left = 0
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'INSERIR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF0041924E233D8F497D3A8C44DB368940F332873CF32F84
+                37DB2C81337D287F3023FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF0049995853459653E6419950FF7DC28FFF96D0A6FF96CFA6FF78BE
+                89FF368D42FF2C8134E6297F3053FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00519F61534D9C5DF464B478FFA8DBB5FF87CC98FF66BC7DFF64BA7CFF86CB
+                98FFA5D9B4FF58AA6BFF2C8134F4297F3053FFFFFF00FFFFFF00FFFFFF0059A6
+                6B2256A366E56AB97DFFA8DBB2FF60BC77FF5CBA73FF59B870FF59B56FFF58B5
+                6FFF5BB774FFA5D9B3FF5AAA6CFF2C8234E5297F3022FFFFFF00FFFFFF005DA9
+                707E53AB68FFAADDB4FF64C179FF5FBE71FF60BC77FFFFFFFFFFFFFFFFFF59B8
+                70FF58B56EFF5CB774FFA6DAB4FF388F43FF2C82347EFFFFFF00FFFFFF0061AC
+                75DB8ACC98FF89D396FF6BC67AFF63C170FF55AB65FFFFFFFFFFFFFFFFFF59B8
+                70FF59B870FF5BB972FF85CC97FF7BBE8DFF308539DBFFFFFF00FFFFFF0065AF
+                7AF6A9DDB3FF7DCF8AFF75CC81FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF59B870FF67BE7DFF9CD4ABFF34883DF6FFFFFF00FFFFFF0069B2
+                7EF6B6E2BEFF8BD597FF7AC986FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF59B870FF69C17EFF9DD4AAFF388B42F6FFFFFF00FFFFFF006DB5
+                83DBACDDB6FFA6DFAFFF81CB8CFF7CC986FF6EBD79FFFFFFFFFFFFFFFFFF5BAC
+                6AFF60BC77FF5CBA73FF8BD199FF80C592FF3C8E47DBFFFFFF00FFFFFF0070B8
+                877E85C797FFD2EED7FF95D9A0FF8AD394FF7FC889FFFFFFFFFFFFFFFFFF79CD
+                85FF6BC37CFF6FC77EFFACDFB5FF459E57FF40914C7EFFFFFF00FFFFFF0073BA
+                8A2270B887E5AADAB7FFD8F1DCFF92D89DFF88CD93FF84CC8EFF8BD496FF8AD4
+                95FF83D28EFFAFE0B7FF6BB97DFF489856E544945122FFFFFF00FFFFFF00FFFF
+                FF0073BB8B5370B887F4AFDCBBFFDCF2E0FFB6E4BDFF9BDBA5FF96D9A0FFA5DF
+                AFFFC0E8C5FF79C28AFF509E5FF44C9B5B53FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF0073BB8B5371B887E694CEA4FFC3E6CBFFCFEBD4FFC9E9CEFFAFDD
+                B8FF6DB97FFF58A569E654A16553FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF0074BB8B2371B9887D6EB684DB6AB380F367B17CF363AE
+                77DB60AB737D5CA86E23FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 3
+              OnClick = BitBtnPrioridadeChamadoInserirClick
+            end
+            object BitBtnPrioridadeChamadoEditar: TBitBtn
+              Left = 75
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'EDITAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00196B3788196B37F2196B37FF196B37F2196B3788FFFFFF00FFFFFF001340
+                58FF15425EFF25699CFF2C76B4FF3B8BBAADFFFFFF00FFFFFF00FFFFFF00196B
+                3784288C53FF64BA8DFF95D2B2FF64BA8DFF288C53FF196B378CFFFFFF001242
+                59FF5D9CD4FFA6CFF5FFA9CFECFF488BC1FF2C76B4FFFFFFFF00FFFFFF001B6C
+                39F762BA8BFF60BA87FFFFFFFFFF60B987FF67BC8FFF196B37F7FFFFFF001E6D
+                93FFCBE3F9FF61AAECFF4098E8FF1567C2FF1660AAFF2C76B4FFFFFFFF00317B
+                4CFF9CD4B6FFFFFFFFFFFFFFFFFFFFFFFFFF95D2B2FF196B37FFFFFFFF001E6D
+                93FFC8E1F2FFD1E7FAFF347DB5FF3199C3FF6DC4DCFF4A9CCFFF3483C7FF4487
+                5DF790D3B1FF92D6B1FFFFFFFFFF65BC8CFF67BC8FFF196B37F7FFFFFF002063
+                98202689B9FFB0CBE1FF67A9C8FF60DCF5FF44D6F4FF8EEEFAFF5DB4E6FF468F
+                A0FF61AB81FF95D4B4FFBAE6D0FF6ABB8FFF2D8F57FF196B378CFFFFFF00FFFF
+                FF00FFFFFF002689B9FFBEE6F2FFB3F4FCFF60DCF5FF44D6F4FF8EEEFAFF5DB4
+                E6FF4A91A5FF58946EF24F8E66FF408459F22E78497CFFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF002790BFFFC3EDF8FFB3F4FCFF60DCF5FF44D6F4FF8EEE
+                FAFF5DB4E6FF3B8FD9FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3EDF8FFB3F4FCFF60DCF5FF44D6
+                F4FF8EEEFAFF5DB4E6FF3B8FD9FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3EDF8FFB3F4FCFF60DC
+                F5FF44D6F4FF8EEEFAFF5DB4E6FF3B8FD9FFFFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3EDF8FFB3F4
+                FCFF68D9F5FF6FCFF3FF599DD0FF73ABDDFF4F91C9FFFFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3ED
+                F8FFA8E2F8FF6CAEDDFFA5CFF4FFA5CFF4FFBDDBF7FF5393CBF7FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBA
+                E4FFA7D4F4FFC5E1F8FFCCE3F9FFCCE3F9FFBDDBF7FF4F90C9FDFFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF0050A8D9FF6AA5D8FFC9E1F7FFCBE3F8FF4295CAFF3182C2AEFFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF002FBAE4094FAADBEA5093CAFD4E90C8FF2F9DD2DF35A4DE19FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 2
+              OnClick = BitBtnPrioridadeChamadoEditarClick
+            end
+            object BitBtnPrioridadeChamadoSalvar: TBitBtn
+              Left = 150
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'SALVAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000BA6A368FB969
+                35B5B86935EEB76835FFB56835FFB46734FFB26634FFB06533FFAE6433FFAC63
+                32FFAA6232FFA96132FFA86031FFA76031FEA66031F1A86131C4BA6A35DEEBC6
+                ADFFEAC5ADFFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+                F8FFFEFBF8FFFEFBF8FFFEFBF8FFC89A7CFFC79879FFA76031EDBA6B37FEEDCA
+                B3FFE0A27AFFFEFAF7FF62C088FF62C088FF62C088FF62C088FF62C088FF62C0
+                88FF62C088FF62C088FFFDF9F6FFCA8D65FFC99B7CFFA76031FEBB6C38FFEECC
+                B6FFE1A27AFFFEFAF7FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDC
+                C2FFBFDCC2FFBFDCC2FFFDF9F6FFCD9068FFCC9E81FFA86132FFBB6B38FFEFCE
+                B8FFE1A279FFFEFAF7FF62C088FF62C088FF62C088FF62C088FF62C088FF62C0
+                88FF62C088FF62C088FFFDF9F6FFCF936AFFCEA384FFAA6132FFBA6A36FFEFD0
+                BBFFE2A27AFFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+                F8FFFEFBF8FFFEFBF8FFFEFBF8FFD3966DFFD2A78AFFAB6232FFBB6A36FFF0D2
+                BEFFE2A37AFFE2A37AFFE1A37AFFE2A37BFFE1A37BFFE0A178FFDE9F77FFDD9F
+                76FFDC9D74FFD99B72FFD89971FFD69970FFD5AB8EFFAD6333FFBB6A36FFF2D5
+                C2FFE3A37AFFE3A37AFFE2A37BFFE2A37BFFE2A47BFFE1A279FFE0A178FFDEA0
+                77FFDE9E75FFDC9D74FFDA9B73FFD99B73FFDAB095FFAF6433FFBB6A36FFF2D8
+                C5FFE3A47BFFE3A37AFFE3A47AFFE2A47BFFE2A37BFFE1A37BFFE1A279FFDFA0
+                77FFDE9F76FFDD9E74FFDB9C72FFDC9D74FFDDB59AFFB16534FFBB6B36FFF4D9
+                C7FFE6A67DFFC88C64FFC98D65FFC98E67FFCB926CFFCB926DFFCA9069FFC88C
+                65FFC88C64FFC88C64FFC88C64FFDA9C74FFE1BA9FFFB36634FFBB6B36FEF4DC
+                C9FFE7A77DFFF9ECE1FFF9ECE1FFF9EDE3FFFCF4EEFFFDFAF7FFFDF7F3FFFAED
+                E5FFF7E7DBFFF7E5D9FFF6E5D8FFDEA077FFE4BEA4FFB46734FFBC6B36FAF5DD
+                CCFFE7A87EFFFAF0E8FFFAF0E8FFC98D66FFFAF0E9FFFDF8F3FFFEFAF8FFFCF4
+                EFFFF9E9DFFFF7E7DBFFF7E5D9FFE0A278FFE7C2A9FFB66835FFBC6B36F0F6DF
+                D0FFE8A87EFFFCF6F1FFFCF6F1FFC88C64FFFAF1E9FFFBF4EEFFFDFAF7FFFDF9
+                F6FFFAF0E8FFF8E8DDFFF7E6DBFFE1A37AFFEFD5C3FFB76935FEBC6B36D8F6DF
+                D1FFE9AA80FFFEFAF6FFFDFAF6FFC88C64FFFBF3EEFFFBF1EAFFFCF6F2FFFEFB
+                F8FFFCF6F1FFF9ECE2FFF8E7DBFFEED0BAFFECD0BDFFBB703EF8BC6B369BF6E0
+                D1FFF7E0D1FFFEFBF8FFFEFBF7FFFDF9F6FFFCF5F0FFFAF0EAFFFBF2EDFFFDF9
+                F6FFFDFAF7FFFBF1EBFFF8E9DFFEECD0BDFBC9895EECB5693563BC6B3671BC6B
+                3690BC6B36CCBC6B36EEBC6B36FABB6B36FEBB6B36FFBB6A36FFBB6A36FFBC6C
+                39FFBD6E3BFFBB6D3AFFBB6B38EFBB703ECBB6693554FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 1
+              OnClick = BitBtnPrioridadeChamadoSalvarClick
+            end
+            object BitBtnPrioridadeChamadoCancelar: TBitBtn
+              Left = 225
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'CANCELAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF000000F1EC0000F1FF0000F1FF0000F1FF0000EFFF0000
+                EFFF0000EDFF0000EDEDFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF000000F5EC1A20F5FF3C4CF9FF3A49F8FF3847F8FF3545F8FF3443
+                F7FF3242F7FF141BF1FF0000EDE8FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF000000F7EC1D23F9FF4453FAFF2429F9FF1212F7FF0F0FF6FF0C0CF5FF0909
+                F5FF161BF5FF3343F7FF141BF1FF0000EDE8FFFFFF00FFFFFF00FFFFFF000000
+                F9EC1F25FAFF4A58FBFF4247FBFFC9C9FDFF3B3BF9FF1313F7FF1010F6FF3333
+                F7FFC5C5FDFF3035F7FF3444F7FF141BF2FF0000EDE8FFFFFF00FFFFFF000000
+                FBFF4F5DFDFF3237FBFFCBCBFEFFF2F2FFFFEBEBFEFF3B3BF9FF3939F8FFEAEA
+                FEFFF1F1FEFFC5C5FDFF181DF6FF3343F7FF0000EFFFFFFFFF00FFFFFF000000
+                FDFF525FFDFF2828FCFF4747FCFFECECFFFFF2F2FFFFECECFFFFECECFEFFF1F1
+                FFFFEAEAFEFF3434F7FF0B0BF5FF3545F8FF0000EFFFFFFFFF00FFFFFF000000
+                FDFF5562FEFF2C2CFDFF2929FCFF4848FCFFEDEDFFFFF2F2FFFFF2F2FFFFECEC
+                FEFF3A3AF9FF1212F7FF0F0FF6FF3848F8FF0000F1FFFFFFFF00FFFFFF000000
+                FDFF5764FEFF3030FDFF2D2DFDFF4B4BFCFFEDEDFFFFF2F2FFFFF2F2FFFFECEC
+                FFFF3D3DF9FF1616F8FF1313F7FF3C4BF8FF0000F1FFFFFFFF00FFFFFF000000
+                FFFF5A67FEFF3333FEFF5050FDFFEDEDFFFFF3F3FFFFEDEDFFFFEDEDFFFFF2F2
+                FFFFECECFEFF3E3EFAFF1717F8FF3F4EF9FF0000F1FFFFFFFF00FFFFFF000000
+                FFFF5B68FFFF4347FEFFCFCFFFFFF3F3FFFFEDEDFFFF4C4CFCFF4A4AFCFFECEC
+                FFFFF2F2FFFFCACAFEFF2A2FFAFF4251FAFF0000F3FFFFFFFF00FFFFFF000000
+                FFEB262BFFFF5D6AFFFF585BFFFFCFCFFFFF5252FEFF2F2FFDFF2C2CFDFF4B4B
+                FCFFCCCCFEFF484CFBFF4957FBFF1D23F9FF0000F5EBFFFFFF00FFFFFF00FFFF
+                FF000000FFEB262BFFFF5D6AFFFF4347FFFF3434FEFF3232FEFF3030FDFF2D2D
+                FDFF383CFCFF4F5DFCFF1F25FAFF0000F7EBFFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF000000FFEB262BFFFF5C69FFFF5B68FFFF5A67FEFF5865FEFF5663
+                FEFF5461FEFF2227FCFF0000FBF2FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF000000FFEC0000FFFF0000FFFF0000FFFF0000FDFF0000
+                FDFF0000FDFF0000FDECFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 4
+              OnClick = BitBtnPrioridadeChamadoCancelarClick
+            end
+            object BitBtnPrioridadeChamadoDeletar: TBitBtn
+              Left = 300
+              Top = 0
+              Width = 75
+              Height = 41
+              Caption = 'DELETAR'
+              DoubleBuffered = True
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF003F54C3233A50C27D3853BEDB3551BDF3304BBCF32E4E
+                B8DB2B4CB77D2748B523FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF004658C8534255C6E63C52CCFF757AE8FF8F92EEFF8F92EEFF7178
+                E4FF334DC1FF2B4AB7E6294BB553FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF004D5ACD534959CBF45C65E0FFA1A6F5FF7E86EFFF5B63E9FF595DE7FF7D84
+                EEFF9EA0F4FF515DD7FF2B4AB7F4294BB553FFFFFF00FFFFFF00FFFFFF00545F
+                D2225361CFE5616BE3FFA1ACF5FF545FECFF505CEAFF4D59E9FF4E59E6FF4C56
+                E6FF5056E6FF9EA2F4FF5460D6FF2A4AB8E5294BB522FFFFFF00FFFFFF005860
+                D47E4B56DBFFA2ABF6FF5664F0FF5266EEFF4D59E9FF4D59E9FF4D59E9FF4D59
+                E9FF4C58E6FF525AE6FF9FA3F5FF3450C4FF2A4AB87EFFFFFF00FFFFFF005C62
+                D7DB818CEEFF7E91F7FF5D73F3FF4D59E9FF4D59E9FF4D59E9FF4D59E9FF4D59
+                E9FF4D59E9FF4F5BE9FF7B83F0FF757BE2FF2E4BBADBFFFFFF00FFFFFF005F63
+                DAF6A1ABF7FF7086F8FF6882F6FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF4D59E9FF5C66EAFF969CF1FF3250BCF6FFFFFF00FFFFFF006469
+                DBF6AFB9F9FF7F93FAFF7085F0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF4D59E9FF5E6AEEFF969DF1FF364FBEF6FFFFFF00FFFFFF00676A
+                DEDBA5AFF5FF9DABFAFF778CF0FF545FECFF545FECFF545FECFF545FECFF545F
+                ECFF545FECFF6377F2FF818EF4FF787FE9FF3A53C0DBFFFFFF00FFFFFF006A69
+                E07E7D83EAFFCDD4FCFF8B9DFAFF7E93F7FF758AEEFF6C84F6FF6C84F6FF6C84
+                F6FF6C84F6FF6379F3FFA4AFF8FF3E4FD0FF3E54C27EFFFFFF00FFFFFF006C6C
+                E1226A69E0E5A3A7F3FFD4DBFDFF879AFAFF7F91F0FF7A8EF1FF7F94F8FF7E92
+                F9FF768CF8FFA8B6F8FF636EE3FF4557C7E54156C522FFFFFF00FFFFFF00FFFF
+                FF006D6CE3536A69E0F4AAADF2FFD8DCFDFFAEBAFAFF91A3FAFF8B9DFAFF9CA9
+                FBFFBAC7FCFF707BE9FF4C5BCCF44858CA53FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF006D6CE3536A6ADFE68E93EDFFBEC3F8FFCCD3F9FFC4CBF9FFAAB4
+                F4FF6670E2FF535ED1E6505DCE53FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF006D6DE2236B6AE17D686ADDDB6364DCF36164DAF35D63
+                D9DB5B63D67D5862D423FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+              Layout = blGlyphTop
+              ParentDoubleBuffered = False
+              TabOrder = 0
+              OnClick = BitBtnPrioridadeChamadoDeletarClick
+            end
+          end
+          object PanelPrioridadeChamados: TPanel
+            Left = 1
+            Top = 41
+            Width = 829
+            Height = 64
+            Align = alClient
+            Enabled = False
+            TabOrder = 1
+            object Label9: TLabel
+              Left = 8
+              Top = 3
+              Width = 113
+              Height = 13
+              Caption = 'Prioridade de chamado:'
+            end
+            object DBEditPrioridadeChamado: TDBEdit
+              Left = 8
+              Top = 22
+              Width = 367
+              Height = 21
+              CharCase = ecUpperCase
+              DataField = 'Prioridade'
+              DataSource = DMPrincipal.DSPrioridadeChamados
+              TabOrder = 0
+            end
+          end
+        end
+        object Panel22: TPanel
+          Left = 0
+          Top = 0
+          Width = 831
+          Height = 30
+          Align = alTop
+          TabOrder = 2
+          object Label5: TLabel
+            Left = 1
+            Top = 1
+            Width = 86
+            Height = 28
+            Align = alLeft
+            Caption = '  BUSCAR:  '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            ExplicitHeight = 19
+          end
+          object EdtBuscaPrioridadeChamado: TEdit
+            Left = 87
+            Top = 1
+            Width = 743
+            Height = 28
+            Align = alClient
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 0
+            OnChange = EdtBuscaPrioridadeChamadoChange
+            ExplicitHeight = 27
+          end
+        end
+      end
+    end
+    object Panel3: TPanel
+      Left = 1
+      Top = 408
+      Width = 839
+      Height = 52
+      Align = alBottom
+      TabOrder = 2
+      object BitBtn1: TBitBtn
+        Left = 1
+        Top = 1
+        Width = 837
+        Height = 50
+        Align = alClient
+        Caption = 'SAIR'
+        DoubleBuffered = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF001D63
+          9B1619609839145D9562105A92880D5890A4135C92FC0C578FED999999FF7171
+          71FF545454FF515151FF4F4F4FFF4C4C4CFF4A4A4AFF474747FF454545FF2567
+          9DFF3274A8FF3D7CAFFF4784B5FF4E8ABAFF3E7EADFF0C578FEAFFFFFF00FFFF
+          FF00585858FFA2A2A2FFA2A2A2FFA3A3A3FFA4A4A4FFA4A4A4FFA5A5A5FF2F6F
+          A5FF78ABD2FF78ABD3FF73A7D1FF69A0CDFF407FAEFF0F5991EAFFFFFF00FFFF
+          FF005C5C5CFFA1A1A1FF3C7340FFA0A1A1FFA3A3A3FFA3A3A3FFA4A4A4FF3674
+          AAFF7DAFD4FF5B9AC9FF5495C7FF5896C8FF4180AEFF135C94EAFFFFFF00FFFF
+          FF00606060FFA0A0A0FF3D7641FF367139FFA2A2A2FFA2A2A2FFA3A3A3FF3D79
+          B0FF82B3D7FF629FCCFF5A9AC9FF5E9BCAFF4381AFFF196098EA37823EFF347E
+          3BFF317937FF2E7534FF499150FF468F4CFF39733DFFA1A1A1FFA2A2A2FF457E
+          B4FF88B7D9FF67A3CFFF619ECCFF639FCCFF4583B1FF1F649CEA3B8742FF89CB
+          92FF84C88DFF80C688FF7BC383FF77C17FFF478F4DFF3B743FFFA1A1A1FF4C84
+          BAFF8DBBDBFF6EA8D1FF66A6D1FF5FB4DFFF4785B1FF2569A1EA3E8B46FF8FCE
+          99FF7DC687FF78C381FF73C07CFF74C07CFF79C281FF49904FFF547F57FF5489
+          BFFF94BFDDFF75ADD4FF63B8E1FF4BD4FFFF428BB8FF2C6EA6EA41904AFF94D2
+          9FFF91D09AFF8DCD96FF89CB92FF84C88DFF519858FF417C46FF9F9F9FFF5A8E
+          C4FF98C3E0FF7CB3D7FF74AFD6FF5EC4EDFF4B88B3FF3473ABEA44944DFF4291
+          4BFF3F8D48FF3D8945FF5DA465FF5AA061FF45834BFF9E9E9EFF9E9E9EFF6092
+          C9FF9EC7E2FF83B8DAFF7DB4D7FF7EB3D7FF4F89B4FF3B79B1EAFFFFFF00FFFF
+          FF00777777FF9A9A9AFF3D8A45FF498A4FFF9C9C9CFF9D9D9DFF9D9D9DFF6696
+          CCFFA2CBE3FF89BDDCFF83B9DAFF84B9DAFF518BB5FF437EB6EAFFFFFF00FFFF
+          FF007A7A7AFF999999FF529159FF999A99FF9B9B9BFF9C9C9CFF9C9C9CFF6C9A
+          D0FFA7CEE5FF8FC1DFFF89BDDCFF8BBDDCFF538DB6FF4B84BCEAFFFFFF00FFFF
+          FF007D7D7DFF999999FF999999FF9A9A9AFF9A9A9AFF9B9B9BFF9B9B9BFF6F9D
+          D3FFAAD1E7FFABD1E7FF98C7E1FF91C2DEFF568FB7FF5289C1EAFFFFFF00FFFF
+          FF00808080FF7E7E7EFF7C7C7CFF7A7A7AFF777777FF757575FF727272FF719E
+          D4FF6F9ED6FF87B2DCFFABD3E8FFA9D0E6FF5890B8FF598EC6EAFFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00709ED6DB6D9CD4FF85B1DAFF5A91B9FF6093CBEAFFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF006D9CD4896A9AD2FB6697CFEE}
+        Layout = blGlyphTop
+        ParentDoubleBuffered = False
+        ParentFont = False
+        TabOrder = 0
+        OnClick = BitBtn1Click
+      end
+    end
+  end
+  object ImageList1: TImageList
+    Left = 712
+    Top = 4
+    Bitmap = {
+      494C010112002800200010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      0000000000003600000028000000400000005000000001002000000000000050
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000069A8DF0D5A5A
+      5A253D3D3DC44D4D4DDF494949F8474747FF474747FF454545FF474747ED3838
+      38C65656562A69A9E10D0000000000000000000000000000000069A8DF0D9D82
+      672E996634E2AF7A41FEAE793DFFAD783CFFAD783CFFAA7539FFAA753CFE9361
+      31F3997C633369A9E10D00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000006DA2D3792579CDFB5E5E
+      5EFF4F4F4FFF848484FF848484FF808080FF545454FF838383FF848484FF4A4A
+      4AFF454545FF2E7ECEF86DA2D38300000000000000006DA2D3792579CDFBC08E
+      54FFB58143FFD3AF85FFD3AF85FFD1AB7FFFB98547FFD2AE83FFD3AF85FFB07B
+      3FFFA9763CFF2E7ECEF86DA2D383000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000297DD1FE82BAEEFF5F5F
+      5FFF8F8F8FFF7A7A7AFF777777FF6D6D6DFF4E4E4EFF727272FF6F6F6FFF8484
+      84FF555555FF83BCEFFF2A77CAFE0000000000000000297DD1FE82BAEEFFC18F
+      55FFD8B994FFCEA678FFCCA375FFBA9370FFB27F44FFCA9F6EFFC89C69FFD3AE
+      85FFB88449FF83BCEFFF2A77CAFE000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000287CCEFC78B3EAFF7A7A
+      7AFF838383FF7E7E7EFF5D5D5DFF494949FF4C4C4CFF555555FF646464FF5F5F
+      5FFF6D6D6DFF7EB8EDFF2974C7F80000000000000000287CCEFC78B3EAFFCEA6
+      79FFD2AE83FFD0A97DFFB78859FF4D4EA6FF77627CFFB6844BFFC4935CFFC18E
+      55FFC79A67FF7EB8EDFF2974C7F8000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000004C4C4C6C636363FFA4A4
+      A4FF505050FF525252FF5B5B5BFFB8B8B8FFC1C1C1FF575757FF4D4D4DFF5A5A
+      5AFF7E7E7EFF606060FE464646730000000000000000A5774A83C3925BFFE2CA
+      B0FFB68244FFB78345FFB88855FF4A5BD0FF5060D2FFBA874CFFB37F41FFBF8A
+      4EFFD0A97DFFBE8D57FE9C6F4687000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000049494902777777894C4C
+      4CFF4E4E4EFF979797FF595959FFABABABFFA5A5A5FF545454FF868686FF6262
+      62FF4A4A4AFE44444478484848050000000000000000B6743903C29A709FB27D
+      41FFB48042FFDCBF9EFFBE8A4CFFC4B6BCFF5E67C8FFB3814DFFD3B088FFC291
+      59FFAF7A3EFE9F6F418EAA734107000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000004848480E4949
+      49834B4B4BFF989898FF5C5C5CFF557CA3FF557CA3FF4C4C4CFF989898FF4E4E
+      4EFF4C4C4C844848480C00000000000000000000000000000000AA6F3E12A576
+      459DB17D3FFFD8BEA0FF968271FF5572A4FF435EB5FFA2795FFFD9BEA0FFB480
+      42FFA875469BA671431000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000006946
+      32083D3D3DAB416F9EFF9CCCF8FFAFD4F7FFAFD4F7FFA5CFF6FF4176A6FF3737
+      37AC65422E0A000000000000000000000000000000000000000000000000AC76
+      460B966B3EC1537291FF9CCCF8FFAFD4F7FFAFD4F7FFA5CFF6FF51799AFF8C64
+      3CC0A571460D0000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000305D8FC8A6CAEEFFABCCEAFFA7D0F6FFA8D0F6FFABCCEAFFA7CDEEFF2E62
+      9ACC000000000000000000000000000000000000000000000000000000000000
+      0000395F89CAA6CAEEFFABCCEAFFA7D0F6FFA8D0F6FFABCCEAFFA7CDEEFF2F62
+      99CC000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000184878F79BB7D1FFA3C9EDFF9FC5E8FF74A1CDFF81B0DDFF96B3CEFF1A4C
+      7EF96AA0D2060000000000000000000000000000000000000000000000000000
+      00001F5C99EFBDD7EFFFA3C9EDFF9FC5E8FF74A1CDFF81B0DDFFB7D3EBFF2365
+      A4F36AA0D2060000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000113667FF2A4B71FF4C759EFF3B638EFF11355BFF28527BFF1C3959FF1032
+      55FF58738E0B0000000000000000000000000000000000000000000000000000
+      0000103773FE7893B5FF8AB7E4FF6793C3FF11355BFF15395FFF1C3959FF1032
+      55FF58738E0B0000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000375279FF255A93FF0C3E76FF245485FF0E3E73FF265584FF163E69FF1430
+      50FE000000000000000000000000000000000000000000000000000000000000
+      0000375279FF0F498FFF0C3E76FF0C3E73FF0E3E73FF113F70FF0F3661FF1430
+      50FE000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00005F636980284D7DFF2D6196FF0F4988FF2C6093FF0C3E73FF1B3D60FF595E
+      638E000000000000000000000000000000000000000000000000000000000000
+      00005F636980284D7DFF0F498AFF0F4988FF0E4581FF0C3E73FF1B3D60FF595E
+      638E000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000565D688D133F7AFF0D3E7DFF0C3C76FF123969FF4E56639D0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000565D688D133F7AFF0D3E7DFF0C3C76FF123969FF4E56639D0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000C895
+      61FDCA9865FFCA9765FFCA9765FFCA9765FFCA9764FFC99764FFC99764FFCA98
+      65FFC89461FD0000000000000000000000000000000000000000000000000000
+      000000000000D69E72C4D3996EF4D19668FFCE9263FFC78756FFC38452FFC384
+      52FFC38452FFC38452FFC38452FFBB7742B00000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000636363995D5D5DD2585858FFC795
+      61FFF9F7F6FFF9F1ECFFF9F1EBFFF8F0E9FFF7EDE6FFF4EAE1FFF2E8DEFFFAF8
+      F6FFC79461FF242424FF232323D12323237A0000000000000000000000000000
+      000000000000D7A175FFF8F2EDFFF7F0EAFFF6EDE6FFF1E4DBFFF0E2D8FFF0E2
+      D8FFF0E2D8FFF0E2D8FFF0E2D8FFC58A5DFD0000000000000000000000000000
+      000000000000317A360A2D753207000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000069A8DF0D847A
+      7E13B3502098A0401FE3AA4522F5AC4622FAAB4422FAA74121F69F3D1FEAB24F
+      24BA806E701669A9E10D00000000000000006A6A6AFDA7A7A7FFB5B5B5FF8181
+      81FFAFACAAFFC5C0BDFFC5C0BDFFC5C0BDFFC5C0BDFFC5C0BDFFC5C0BDFFADAA
+      A8FF2C2C2CFFB5B5B5FF9B9B9BFF232323FF000000000000000000000000D69E
+      72B1D3996EDCE1AE87FFFAF4F0FFEACBB2FFEACCB3FFE8C7ACFFE8C7ACFFE8C7
+      ACFFE8C8B0FFE8C8AEFFF0E2D8FFC48654FF0000000000000000000000000000
+      00003985400A37833DFF317B37FB2E7633070000000000000000000000000000
+      000000000000000000000000000000000000000000006DA2D3792579CDFB8661
+      61FBBF6035FFFEB961FFFEB962FFFEB962FFFEB962FFFEB961FFFEB961FFB149
+      24FF7A646DF52E7ECEF86DA2D38300000000707070FFB5B5B5FFB5B5B5FF9595
+      95FF818181FF818181FF797979FF6E6E6EFF616161FF525252FF434343FF4242
+      42FF6E6E6EFFB5B5B5FFB5B5B5FF252525FF000000000000000000000000D7A1
+      75E6F8F2EDE6E3B18CFFFAF6F1FFEAC9AEFFFFFFFFFFE8C7ACFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFF1E5DBFFC68655FF0000000000000000000000004292
+      490A408E47FF54A35CFF4F9F57FF327C38FE2E77340800000000000000000000
+      00000000000000000000000000000000000000000000297DD1FE82BAEEFF9F66
+      58FFF5BB84FFFFAC5BFFFEA85AFFFEA257FFFE9C53FFFFA355FFFF9F50FFF8AE
+      78FFA45E4AFF83BCEFFF2A77CAFE00000000757575FFBBBBBBFFBBBBBBFF8D8D
+      8DFFD4D4D4FFB9B9B9FFB9B9B9FFB9B9B9FFB9B9B9FFB9B9B9FFB9B9B9FFD3D3
+      D3FF838383FFBBBBBBFFBBBBBBFF2A2A2AFF00000000D69E729DD3996EC3E0AC
+      85FAF7ECE5FAE5B48FFFFAF6F2FFE9C6AAFFE9C6ACFFE8C7ACFFE8C7ACFFE9C9
+      B0FFE8C8B0FFE8CCB5FFF2E7DEFFC88A59FF00000000000000004B9E530A499A
+      51FF5BAC64FF77CA82FF74C87EFF51A059FF337D39FE2F783508000000000000
+      00000000000000000000000000000000000000000000287CCEFC78B3EAFFB39E
+      94FFFFB760FFFFB663FFFEB261FFFEAC5DFFFEA559FFFD9E53FFFE974EFFFF8D
+      43FFBC8F82FF7EB8EDFF2974C7FA000000007A7A7AFFD7D7D7FFD7D7D7FF9797
+      97FFD8D8D8FFBFBFBFFFBFBFBFFFBFBFBFFFBFBFBFFFBFBFBFFFBFBFBFFFD7D7
+      D7FF8E8E8EFFD7D7D7FFD7D7D7FF3F3F3FFF00000000D7A175CCF8F2EDCCE5B6
+      93FAFAF5F0FAE7B794FFFBF7F4FFE9C3A6FFFFFFFFFFE8C7ACFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFF7F1EBFFCB8F5FFF0000000053A95C0A51A65AFF63B5
+      6DFF7ECE89FF7BCC87FF76CA81FF76C981FF52A25AFF347E3AFE307935080000
+      000000000000000000000000000000000000000000009E532B508A5444FFFCC8
+      ABFFFFD198FFFEC76DFFFEBF68FFFEB964FFFEB15EFFFEA859FFFDA054FFFFB7
+      7AFFFEA980FF885042FF8B4C2B60000000007E7E7EFFF9F9F9FFF9F9F9FFABAB
+      ABFFDFDFDFFFCBCBCBFFCBCBCBFFCBCBCBFFCBCBCBFFCBCBCBFFCBCBCBFFDFDF
+      DFFFA3A3A3FFF9F9F9FFF9F9F9FF616161FF00000000E1AE87CCFAF4F0CCE5B6
+      92FAF9F3EDFAE9BA98FFFBF7F4FFE9C3A6FFE9C3A6FFE9C3A6FFE9C3A6FFE9C3
+      A6FFE9C3A6FFE9C3A6FFFBF7F4FFCE9364FF5AB4650959B063FF6BBD76FF84D2
+      90FF7AC985FF60B26AFF63B46DFF78C983FF78CB82FF53A35CFF347F3AFD317A
+      36080000000000000000000000000000000000000000A9491301A9460D60C44C
+      1FFFF6E4D6FFFFE4A4FFFFD472FFFFC969FFFFC063FFFFB65FFFFFC180FFF6D7
+      C6FFC5491FFF9E3E0B6997410F0400000000818181F9FCFCFCFFFCFCFCFFCBCB
+      CBFFF2F2F2FFF2F2F2FFF2F2F2FFF2F2F2FFF2F2F2FFF2F2F2FFF2F2F2FFF2F2
+      F2FFC6C6C6FFFCFCFCFFFCFCFCFF707070FE00000000E3B18CCCFAF6F1CCE7B8
+      96FAFBF8F5FAEBBD9BFFFBF7F4FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFBF7F4FFD1976AFF5EB969465BB566E479C986FF80CE
+      8DFF51A65AFC4DA1566F499C518B5CAD67FF7CCC86FF79CB85FF54A45DFF3580
+      3BFC317B37080000000000000000000000000000000000000000A74A1507A448
+      1369BC481CFFF4E2D4FF4E7BA9FF4D7BA8FF4D7BA8FF4E7BA9FFF3D6C3FFBE46
+      1CFF9D42126F9842130A0000000000000000818181D2D2D2D2FFE8E8E8FF7D7D
+      7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D
+      7DFF7D7D7DFFE8E8E8FFC4C4C4FF565656DC00000000E5B48FCCFAF6F2CCE9BB
+      99FAFAF3EEFAECBF9EFFFBF7F4FF9CD5A5FF98D3A1FF8BCB93FF82C689FF7EC3
+      84FF7AC180FF76BE7CFFFBF7F4FFD49B6FFF000000005FBA6A3C5CB666E66DC0
+      79FF55AC5F6F00000000000000004A9D52915EAE68FF7DCD89FF7CCD87FF56A5
+      5FFF36813CFC327C38080000000000000000000000000000000000000000A54B
+      17056A3C25A2346DA7FF9CCCF8FFAFD4F7FFAFD4F7FFA5CFF6FF3474AEFF683E
+      2DAD9B451509000000000000000000000000818181459A9A9AFFCCCCCCFFC78B
+      4EFFF9F4EDFFFEE8D8FFFEE8D7FFFDE5D3FFFCE4D1FFFAE0C7FFF9DDC3FFFAF4
+      EDFFC7854AFFC3C3C3FF747474FF4747474500000000E7B794CCFBF7F4CCEBBD
+      9CFAFBF8F5FAEFC6A8FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7
+      F4FFFBF7F4FFFBF7F4FFFBF7F4FFD7A074F800000000000000005FBB6A435CB7
+      6765000000000000000000000000000000004B9E53915FAF69FF7FCE8AFF7ECE
+      89FF57A660FF37823DFC337D3908000000000000000000000000000000000000
+      00002A5B92C4A6CAEEFFABCCEAFFA7D0F6FFA8D0F6FFABCCEAFFA7CDEEFF2D62
+      9ACC000000000000000000000000000000000000000081818163818181F3C589
+      4CFFF9F4EFFFFEE7D7FFFDE7D5FFFCE6D2FFFBE1CCFFF8DCC2FFF6DABDFFFAF4
+      EFFFC48348FF595959F3535353630000000000000000E9BA98CCFBF7F4CCECBF
+      9FFAFAF3EEFAC9CBA4FCE6C3A2FEEDC09FFFEBBE9DFFE7B793FFE4B28CFFE2AF
+      88FFE0AC84FFDDA980FFDCA57DFFDAA37ACA0000000000000000000000000000
+      000000000000000000000000000000000000000000004B9F549160B06AFF81CF
+      8DFF7FCF8BFF58A761FF398540FF347E3A080000000000000000000000000000
+      00001F5E9BEDD9E8F7FF97C5F1FF8EBBE5FF7FA9D1FF89B5DFFFCDDFEEFF2368
+      A7F16AA0D206000000000000000000000000000000000000000081818109C589
+      4BF9F9F4F0FFFCE6D3FFFDE7D3FFFBE3CDFFFAE0C8FFF5D6BBFFF3D4B5FFF8F4
+      F0FFC38246F960606009000000000000000000000000EBBD9BCCFBF7F4CCF0CA
+      AEF6FBF8F5FAFBF8F5FAFBF8F5FAFBF8F5FAFBF8F5FAFBF8F5FAFBF7F4FAF8EF
+      E9FAFBF7F4E6D7A074E000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000004CA0559162B2
+      6CFF82D18FFF7AC885FF57A660FF38843F7B0000000000000000000000000000
+      00000C3E87FF7C97B8FF8AB7E4FF719CC8FF15406EFF194472FF22456BFF113B
+      66FA4D78A207000000000000000000000000000000000000000000000000C689
+      4BF7F9F5F1FFFCE3CFFFFCE4CFFFFAE1CAFFF9DDC4FFF4E9DFFFF7F2ECFFF5EF
+      E9FFC27E45FB00000000000000000000000000000000ECBF9ECCFBF7F4CCC6CB
+      A4E3E1C4A2F5E5C19EFAE3BF9BFADFB892FADCB38BFADAB087FAE2B28DFADCA8
+      7FFADCA57DE6DAA37AB600000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000004DA1
+      569163B36DFF5FAF69FF41914979000000000000000000000000000000000000
+      00000F4B97FF12589FFF0F4A8AFF0F4B87FF114B87FF154C85FF124175FF0F33
+      5CF100000000000000000000000000000000000000000000000000000000C689
+      4CF6F9F5F1FFFCE3CDFFFBE3CDFFF9E0C8FFF8DCC2FFFDFBF8FFFCE6CDFFE2B6
+      84FFBF7942A600000000000000000000000000000000EEC1A1BCFBF7F4CCFBF7
+      F4CCFBF7F4CCFBF7F4CCFBF7F4CCFBF7F4CCFBF7F4CCFBF7F4CCFBF7F4CCD7A0
+      74C6000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00004EA257914A9D527F00000000000000000000000000000000000000000000
+      000012336777114E96FE12589BFF125899FF115393FF0F4A87FF0E3E71FE132E
+      4B8100000000000000000000000000000000000000000000000000000000C486
+      49FAF7F2ECFFF8F4EEFFF8F3EDFFF8F3EDFFF8F2ECFFF2E6D7FFE2B27DFFDA91
+      63F6B46B3E0700000000000000000000000000000000EFC2A365EFC1A2B6EDC0
+      9FCCEBBE9DCCE7B793CCE4B28CCCE2AF88CCE0AC84CCDDA980CCDCA57DCCDAA3
+      7AA2000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000014356A7D12488DF4104B90FF0F488AFF11427DF515335B840000
+      000000000000000000000000000000000000000000000000000000000000C17D
+      4460C88B4DBBC88C4FFEC88C4FFFC88D4FF7C98C4FF7C5894CFEC4763B940000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000001D639B1619609839145D
+      9562105A92880D5890A4135C92FC0C578FED0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000196B3788196B
+      37F2196B37FF196B37F2196B378800000000999999FF717171FF545454FF5151
+      51FF4F4F4FFF4C4C4CFF4A4A4AFF474747FF454545FF25679DFF3274A8FF3D7C
+      AFFF4784B5FF4E8ABAFF3E7EADFF0C578FEA0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000145D
+      9503105A921A00000000000000000000000000000000134058FF15425EFF2569
+      9CFF2C76B4FF3B8BBAAD000000000000000000000000196B3784288C53FF64BA
+      8DFF95D2B2FF64BA8DFF288C53FF196B378C0000000000000000585858FFA2A2
+      A2FFA2A2A2FFA3A3A3FFA4A4A4FFA4A4A4FFA5A5A5FF2F6FA5FF78ABD2FF78AB
+      D3FF73A7D1FF69A0CDFF407FAEFF0F5991EA0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000022669E061B62
+      9AAD22679DFF115B9387000000000000000000000000124259FF5D9CD4FFA6CF
+      F5FFA9CFECFF488BC1FF2C76B4FF00000000000000001B6C39F762BA8BFF60BA
+      87FFFFFFFFFF60B987FF67BC8FFF196B37F700000000000000005C5C5CFFA1A1
+      A1FF3C7340FFA0A1A1FFA3A3A3FFA3A3A3FFA4A4A4FF3674AAFF7DAFD4FF5B9A
+      C9FF5495C7FF5896C8FF4180AEFF135C94EA8E512BBFB06331EFBB7038FABE77
+      3CFBC17B40FBC27E42FBC28045FBC38247FBC38649FBC3864AFBC3874BFBC387
+      4BFBC3874CFABD8349F4AC7440E18E512BBF0000000000000000000000000000
+      000000000000000000000000000000000000000000003272AA062B6DA5AD558D
+      BCFF89B5DDFF185F97FF0000000000000000000000001E6D93FFCBE3F9FF61AA
+      ECFF4098E8FF1567C2FF1660AAFF2C76B4FF00000000317B4CFF9CD4B6FFFFFF
+      FFFFFFFFFFFFFFFFFFFF95D2B2FF196B37FF0000000000000000606060FFA0A0
+      A0FF3D7641FF367139FFA2A2A2FFA2A2A2FFA3A3A3FF3D79B0FF82B3D7FF629F
+      CCFF5A9AC9FF5E9BCAFF4381AFFF196098EAA35D31DEF8F3EEFDF5ECE4FEFBF5
+      F0FFFBF7F1FFFBF7F3FFFBF8F4FFFCF9F5FFFCF9F5FFFCF9F6FFFCF9F7FFFCFA
+      F7FFFCFAF7FFF7F1ECFDEAD9CCF7AB7642DD0000000000000000000000000000
+      000000000000000000000000000000000000447FB7063C79B1AD6497C5FF9DC1
+      E4FF6699C7FF1F659DEB0000000000000000000000001E6D93FFC8E1F2FFD1E7
+      FAFF347DB5FF3199C3FF6DC4DCFF4A9CCFFF3483C7FF44875DF790D3B1FF92D6
+      B1FFFFFFFFFF65BC8CFF67BC8FFF196B37F737823EFF347E3BFF317937FF2E75
+      34FF499150FF468F4CFF39733DFFA1A1A1FFA2A2A2FF457EB4FF88B7D9FF67A3
+      CFFF619ECCFF639FCCFF4583B1FF1F649CEABE6F3CFEFCF9F5FFECD0BCFFF9E4
+      D6FFFEECDFFFFEEBDFFFFEEBDEFFFEEBDBFFFEEBDCFFFEEADDFFFDEADBFFFDE8
+      D8FFF8E0CDFFEACBB3FFF3EBE3FFC78B50FE0000000000000000DDB28F02D9AE
+      8A97D6A985E3D3A57FFDD0A07BFDCD9C76E4A2938ADE75A2CCFFABCBE8FF76A4
+      CEFF3070A8EB286BA327000000000000000000000000206398202689B9FFB0CB
+      E1FF67A9C8FF60DCF5FF44D6F4FF8EEEFAFF5DB4E6FF468FA0FF61AB81FF95D4
+      B4FFBAE6D0FF6ABB8FFF2D8F57FF196B378C3B8742FF89CB92FF84C88DFF80C6
+      88FF7BC383FF77C17FFF478F4DFF3B743FFFA1A1A1FF4C84BAFF8DBBDBFF6EA8
+      D1FF66A6D1FF5FB4DFFF4785B1FF2569A1EAC27646FFFDFBF8FFF9E3D2FFECCF
+      B9FFF8E1D0FFFDE7D6FFF4D5BDFFE9BFA0FFE9BFA2FFF4D3BDFFFDE6D4FFF7DE
+      C9FFEBCAB0FFF8DBC4FFF8F2ECFFC98C50FF00000000E4BD9B02E1B896C0E8C9
+      AEFFF5E1CDFFF7E5D3FFF7E5D1FFF3DDC8FFDFBA9CFFC7A891FF86AED5FF417D
+      B5EB3977AF270000000000000000000000000000000000000000000000002689
+      B9FFBEE6F2FFB3F4FCFF60DCF5FF44D6F4FF8EEEFAFF5DB4E6FF4A91A5FF5894
+      6EF24F8E66FF408459F22E78497C000000003E8B46FF8FCE99FF7DC687FF78C3
+      81FF73C07CFF74C07CFF79C281FF49904FFF547F57FF5489BFFF94BFDDFF75AD
+      D4FF63B8E1FF4BD4FFFF428BB8FF2C6EA6EAC57D50FFFDFBF9FFFDE9D8FFF9E1
+      D0FFEBCAB3FFECC5A7FFE3B698FFF7E7DDFFF7E8DEFFE3B697FFECC3A4FFEAC5
+      A9FFF8DAC2FFFCDFC6FFF8F3EDFFC88D50FF00000000E8C3A297EDD0B7FFF8E8
+      D9FFF5DEC8FFF3D8BDFFF3D6BBFFF4DBC2FFF7E4D2FFDFBB9DFF9D9492F74B84
+      BC27000000000000000000000000000000000000000000000000000000000000
+      00002790BFFFC3EDF8FFB3F4FCFF60DCF5FF44D6F4FF8EEEFAFF5DB4E6FF3B8F
+      D9FF0000000000000000000000000000000041904AFF94D29FFF91D09AFF8DCD
+      96FF89CB92FF84C88DFF519858FF417C46FF9F9F9FFF5A8EC4FF98C3E0FF7CB3
+      D7FF74AFD6FF5EC4EDFF4B88B3FF3473ABEAC9865BFFFDFBF9FFFDE8D7FFFDE6
+      D4FFEDC6ABFFDCAA89FFF9ECE3FFFFFBF9FFFFFCFAFFF9EEE6FFDCA887FFEDBF
+      9CFFFCDBC0FFFCDBC0FFF8F3EDFFC88C50FF00000000ECC8A8E3F7E7D7FFF6E1
+      CCFFF4DBC2FFF4DAC0FFF3D8BDFFF3D7BBFFF4DBC2FFF3DEC9FFCD9F7BE70000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000002FBAE4FFC3EDF8FFB3F4FCFF60DCF5FF44D6F4FF8EEEFAFF5DB4
+      E6FF3B8FD9FF00000000000000000000000044944DFF42914BFF3F8D48FF3D89
+      45FF5DA465FF5AA061FF45834BFF9E9E9EFF9E9E9EFF6092C9FF9EC7E2FF83B8
+      DAFF7DB4D7FF7EB3D7FF4F89B4FF3B79B1EACC8E66FFFDFBF9FFFDE5D3FFF1CC
+      B2FFE3B596FFF9EAE0FFFFF9F5FFFEF3EAFFFEF4EDFFFFFBF9FFF9EDE5FFE3B0
+      8DFFF0C19EFFFCD7B7FFF8F3EDFFC88C50FF00000000F0CEAEFDF9ECDFFFF5DF
+      C8FFF5DDC6FFF4DCC3FFF4DAC1FFF3D9BEFFF3D7BDFFF8E6D3FFD3A57FFD0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000002FBAE4FFC3EDF8FFB3F4FCFF60DCF5FF44D6F4FF8EEE
+      FAFF5DB4E6FF3B8FD9FF00000000000000000000000000000000777777FF9A9A
+      9AFF3D8A45FF498A4FFF9C9C9CFF9D9D9DFF9D9D9DFF6696CCFFA2CBE3FF89BD
+      DCFF83B9DAFF84B9DAFF518BB5FF437EB6EAD09670FFFDFBF9FFF1CDB1FFE3B5
+      96FFF9E9DEFFFEF7F1FFFDEDE1FFFEEFE4FFFEF1E7FFFEF3EAFFFFFAF7FFF9EC
+      E3FFE2AE8AFFF0BC95FFF8F4ECFFC88C50FF00000000F4D3B4FDF9EDE1FFF6E1
+      CCFFF5DFC9FFF5DEC7FFF4DCC4FFF4DBC2FFF4DAC0FFF8E7D6FFD7AA86FD0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000002FBAE4FFC3EDF8FFB3F4FCFF68D9F5FF6FCF
+      F3FF599DD0FF73ABDDFF4F91C9FF0000000000000000000000007A7A7AFF9999
+      99FF529159FF999A99FF9B9B9BFF9C9C9CFF9C9C9CFF6C9AD0FFA7CEE5FF8FC1
+      DFFF89BDDCFF8BBDDCFF538DB6FF4B84BCEAD39D7BFEFBF6F2FFE3B496FFF9E8
+      DCFFFEF5EEFFFDE9DAFFFDEADCFFFDECDEFFFDEDE1FFFEEFE4FFFEF1E7FFFFFA
+      F6FFF9EAE0FFE2AA85FFF1E4D9FFC88C50FE00000000F7D7B9E3F9EBDEFFF7E7
+      D6FFF6E1CCFFF5E0CAFFF5DEC8FFF5DDC5FFF6E1CBFFF5E2D0FFDBB08CE30000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000002FBAE4FFC3EDF8FFA8E2F8FF6CAE
+      DDFFA5CFF4FFA5CFF4FFBDDBF7FF5393CBF700000000000000007D7D7DFF9999
+      99FF999999FF9A9A9AFF9A9A9AFF9B9B9BFF9B9B9BFF6F9DD3FFAAD1E7FFABD1
+      E7FF98C7E1FF91C2DEFF568FB7FF5289C1EAD7AB91DCFDFAF8FEFCF5F1FFFFFC
+      F9FFFFFCF9FFFFFCF9FFFFFCF9FFFFFCFAFFFFFCFAFFFFFCFAFFFFFCFBFFFFFD
+      FBFFFFFDFCFFFBF6F3FFF8EFEAFDAB7743DB00000000FADBBD97F8E2CCFFFAEE
+      E3FFF7E7D6FFF6E2CEFFF6E1CBFFF6E3D0FFF9EADDFFECCFB5FFDFB693970000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000002FBAE4FFA7D4F4FFC5E1
+      F8FFCCE3F9FFCCE3F9FFBDDBF7FF4F90C9FD0000000000000000808080FF7E7E
+      7EFF7C7C7CFF7A7A7AFF777777FF757575FF727272FF719ED4FF6F9ED6FF87B2
+      DCFFABD3E8FFA9D0E6FF5890B8FF598EC6EAC89A7CBFD5A484F0D09770FBCC8F
+      64FDCC8E62FDCB8E60FDCA8C5DFDC98B5BFDC88A58FDC78856FDC68653FDC584
+      50FDC4824DFCC1834DF7B27948E38E512BBF00000000FCDEC002FADBBEC0F9E2
+      CDFFFAECDEFFF9EEE2FFF9EDE2FFF8E9DAFFF0D5BDFFE7C09FC0E3BC9A020000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000050A8D9FF6AA5
+      D8FFC9E1F7FFCBE3F8FF4295CAFF3182C2AE0000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000709E
+      D6DB6D9CD4FF85B1DAFF5A91B9FF6093CBEA0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000FCDEC102FADC
+      BF97F9D9BBE3F6D6B8FDF4D3B4FDF1CFAFE3EECBAB97EBC6A602000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000002FBAE4094FAA
+      DBEA5093CAFD4E90C8FF2F9DD2DF35A4DE190000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000006D9CD4896A9AD2FB6697CFEE0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000BA6A368FB96935B5B86935EEB768
+      35FFB56835FFB46734FFB26634FFB06533FFAE6433FFAC6332FFAA6232FFA961
+      32FFA86031FFA76031FEA66031F1A86131C40000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000F1EC0000F1FF0000F1FF0000F1FF0000EFFF0000EFFF0000EDFF0000
+      EDED000000000000000000000000000000000000000000000000000000000000
+      00003F54C3233A50C27D3853BEDB3551BDF3304BBCF32E4EB8DB2B4CB77D2748
+      B52300000000000000000000000000000000BA6A35DEEBC6ADFFEAC5ADFFFEFB
+      F8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+      F8FFFEFBF8FFC89A7CFFC79879FFA76031ED00000000B7B7B7FFAEAEAEFF3071
+      A9FF2C6EA6FF286BA3FF2468A0FF21669EFF1D639BFF1A6199FF175F97FF145C
+      94FF115B93FF6C6C6CFF6C6C6CFF000000000000000000000000000000000000
+      F5EC1A20F5FF3C4CF9FF3A49F8FF3847F8FF3545F8FF3443F7FF3242F7FF141B
+      F1FF0000EDE80000000000000000000000000000000000000000000000004658
+      C8534255C6E63C52CCFF757AE8FF8F92EEFF8F92EEFF7178E4FF334DC1FF2B4A
+      B7E6294BB553000000000000000000000000BA6B37FEEDCAB3FFE0A27AFFFEFA
+      F7FF62C088FF62C088FF62C088FF62C088FF62C088FF62C088FF62C088FF62C0
+      88FFFDF9F6FFCA8D65FFC99B7CFFA76031FE0000000000000000000000003675
+      ADFF86B6D8FF83B3D7FF81B2D6FF7DAFD5FF7BADD4FF79ABD3FF76AAD2FF74A8
+      D1FF155D95FF00000000000000000000000000000000000000000000F7EC1D23
+      F9FF4453FAFF2429F9FF1212F7FF0F0FF6FF0C0CF5FF0909F5FF161BF5FF3343
+      F7FF141BF1FF0000EDE8000000000000000000000000000000004D5ACD534959
+      CBF45C65E0FFA1A6F5FF7E86EFFF5B63E9FF595DE7FF7D84EEFF9EA0F4FF515D
+      D7FF2B4AB7F4294BB5530000000000000000BB6C38FFEECCB6FFE1A27AFFFEFA
+      F7FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDC
+      C2FFFDF9F6FFCD9068FFCC9E81FFA86132FF0000000000000000000000003C79
+      B1FF8BB9DAFF66A2CEFF62A0CDFF5F9DCBFF5B9AC9FF5897C8FF5495C7FF77AB
+      D3FF196098FF000000000000000000000000000000000000F9EC1F25FAFF4A58
+      FBFF4247FBFFC9C9FDFF3B3BF9FF1313F7FF1010F6FF3333F7FFC5C5FDFF3035
+      F7FF3444F7FF141BF2FF0000EDE80000000000000000545FD2225361CFE5616B
+      E3FFA1ACF5FF545FECFF505CEAFF4D59E9FF4E59E6FF4C56E6FF5056E6FF9EA2
+      F4FF5460D6FF2A4AB8E5294BB52200000000BB6B38FFEFCEB8FFE1A279FFFEFA
+      F7FF62C088FF62C088FF62C088FF62C088FF62C088FF62C088FF62C088FF62C0
+      88FFFDF9F6FFCF936AFFCEA384FFAA6132FF000000000000000000000000427D
+      B5FF8FBDDCFF6CA7D0FF67A4CFFF64A1CDFF609ECCFF5C9BCAFF5999C9FF7BAD
+      D4FF1E649CFF000000000000000000000000000000000000FBFF4F5DFDFF3237
+      FBFFCBCBFEFFF2F2FFFFEBEBFEFF3B3BF9FF3939F8FFEAEAFEFFF1F1FEFFC5C5
+      FDFF181DF6FF3343F7FF0000EFFF00000000000000005860D47E4B56DBFFA2AB
+      F6FF5664F0FF5266EEFF4D59E9FF4D59E9FF4D59E9FF4D59E9FF4C58E6FF525A
+      E6FF9FA3F5FF3450C4FF2A4AB87E00000000BA6A36FFEFD0BBFFE2A27AFFFEFB
+      F8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+      F8FFFEFBF8FFD3966DFFD2A78AFFAB6232FF0000000000000000000000004882
+      BAFF93C0DDFF71ABD2FF6DA8D1FF69A5CFFF66A2CEFF629FCCFF5E9CCBFF7FB0
+      D5FF23679FFF000000000000000000000000000000000000FDFF525FFDFF2828
+      FCFF4747FCFFECECFFFFF2F2FFFFECECFFFFECECFEFFF1F1FFFFEAEAFEFF3434
+      F7FF0B0BF5FF3545F8FF0000EFFF00000000000000005C62D7DB818CEEFF7E91
+      F7FF5D73F3FF4D59E9FF4D59E9FF4D59E9FF4D59E9FF4D59E9FF4D59E9FF4F5B
+      E9FF7B83F0FF757BE2FF2E4BBADB00000000BB6A36FFF0D2BEFFE2A37AFFE2A3
+      7AFFE1A37AFFE2A37BFFE1A37BFFE0A178FFDE9F77FFDD9F76FFDC9D74FFD99B
+      72FFD89971FFD69970FFD5AB8EFFAD6333FF0000000000000000000000004E86
+      BEFF98C3DFFF77AFD5FF73ACD3FF6FA9D2FF6BA7D0FF5BB7E3FF54C2EDFF81B4
+      D7FF286BA3FF000000000000000000000000000000000000FDFF5562FEFF2C2C
+      FDFF2929FCFF4848FCFFEDEDFFFFF2F2FFFFF2F2FFFFECECFEFF3A3AF9FF1212
+      F7FF0F0FF6FF3848F8FF0000F1FF00000000000000005F63DAF6A1ABF7FF7086
+      F8FF6882F6FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4D59
+      E9FF5C66EAFF969CF1FF3250BCF600000000BB6A36FFF2D5C2FFE3A37AFFE3A3
+      7AFFE2A37BFFE2A37BFFE2A47BFFE1A279FFE0A178FFDEA077FFDE9E75FFDC9D
+      74FFDA9B73FFD99B73FFDAB095FFAF6433FF000000000000000000000000538A
+      C2FF9CC6E1FF7CB3D7FF79B1D5FF75ADD4FF71ABD2FF5FBAE4FF4BD4FFFF7CBB
+      E0FF2E6FA7FF000000000000000000000000000000000000FDFF5764FEFF3030
+      FDFF2D2DFDFF4B4BFCFFEDEDFFFFF2F2FFFFF2F2FFFFECECFFFF3D3DF9FF1616
+      F8FF1313F7FF3C4BF8FF0000F1FF00000000000000006469DBF6AFB9F9FF7F93
+      FAFF7085F0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4D59
+      E9FF5E6AEEFF969DF1FF364FBEF600000000BB6A36FFF2D8C5FFE3A47BFFE3A3
+      7AFFE3A47AFFE2A47BFFE2A37BFFE1A37BFFE1A279FFDFA077FFDE9F76FFDD9E
+      74FFDB9C72FFDC9D74FFDDB59AFFB16534FF000000000000000000000000598E
+      C6FFA0C9E3FF82B8D9FF7EB5D8FF7AB2D6FF77AFD5FF73ACD3FF6DABD4FF8CBA
+      DAFF3373ABFF000000000000000000000000000000000000FFFF5A67FEFF3333
+      FEFF5050FDFFEDEDFFFFF3F3FFFFEDEDFFFFEDEDFFFFF2F2FFFFECECFEFF3E3E
+      FAFF1717F8FF3F4EF9FF0000F1FF0000000000000000676ADEDBA5AFF5FF9DAB
+      FAFF778CF0FF545FECFF545FECFF545FECFF545FECFF545FECFF545FECFF6377
+      F2FF818EF4FF787FE9FF3A53C0DB00000000BB6B36FFF4D9C7FFE6A67DFFC88C
+      64FFC98D65FFC98E67FFCB926CFFCB926DFFCA9069FFC88C65FFC88C64FFC88C
+      64FFC88C64FFDA9C74FFE1BA9FFFB36634FF0000000000000000000000005E91
+      C9FFA4CCE4FF87BBDBFF84B9DAFF80B6D8FF7CB3D7FF79B0D5FF74ADD4FF8FBD
+      DCFF3977AFFF000000000000000000000000000000000000FFFF5B68FFFF4347
+      FEFFCFCFFFFFF3F3FFFFEDEDFFFF4C4CFCFF4A4AFCFFECECFFFFF2F2FFFFCACA
+      FEFF2A2FFAFF4251FAFF0000F3FF00000000000000006A69E07E7D83EAFFCDD4
+      FCFF8B9DFAFF7E93F7FF758AEEFF6C84F6FF6C84F6FF6C84F6FF6C84F6FF6379
+      F3FFA4AFF8FF3E4FD0FF3E54C27E00000000BB6B36FEF4DCC9FFE7A77DFFF9EC
+      E1FFF9ECE1FFF9EDE3FFFCF4EEFFFDFAF7FFFDF7F3FFFAEDE5FFF7E7DBFFF7E5
+      D9FFF6E5D8FFDEA077FFE4BEA4FFB46734FF0000000000000000000000006395
+      CDFFA8CFE5FF8CBFDDFF88BDDCFF85BADBFF81B7D9FF7EB4D7FF7AB2D6FF94C1
+      DDFF3F7CB4FF000000000000000000000000000000000000FFEB262BFFFF5D6A
+      FFFF585BFFFFCFCFFFFF5252FEFF2F2FFDFF2C2CFDFF4B4BFCFFCCCCFEFF484C
+      FBFF4957FBFF1D23F9FF0000F5EB00000000000000006C6CE1226A69E0E5A3A7
+      F3FFD4DBFDFF879AFAFF7F91F0FF7A8EF1FF7F94F8FF7E92F9FF768CF8FFA8B6
+      F8FF636EE3FF4557C7E54156C52200000000BC6B36FAF5DDCCFFE7A87EFFFAF0
+      E8FFFAF0E8FFC98D66FFFAF0E9FFFDF8F3FFFEFAF8FFFCF4EFFFF9E9DFFFF7E7
+      DBFFF7E5D9FFE0A278FFE7C2A9FFB66835FF0000000000000000000000006798
+      D0FFABD1E7FF90C2DFFF8DC0DEFF8ABEDCFF87BBDBFF83B8DAFF80B6D8FF99C4
+      E0FF4580B8FF00000000000000000000000000000000000000000000FFEB262B
+      FFFF5D6AFFFF4347FFFF3434FEFF3232FEFF3030FDFF2D2DFDFF383CFCFF4F5D
+      FCFF1F25FAFF0000F7EB000000000000000000000000000000006D6CE3536A69
+      E0F4AAADF2FFD8DCFDFFAEBAFAFF91A3FAFF8B9DFAFF9CA9FBFFBAC7FCFF707B
+      E9FF4C5BCCF44858CA530000000000000000BC6B36F0F6DFD0FFE8A87EFFFCF6
+      F1FFFCF6F1FFC88C64FFFAF1E9FFFBF4EEFFFDFAF7FFFDF9F6FFFAF0E8FFF8E8
+      DDFFF7E6DBFFE1A37AFFEFD5C3FFB76935FE0000000000000000000000006B9B
+      D3FFAED4E8FFABD3E8FFAAD1E7FFA8CFE5FFA5CDE4FFA2CBE4FFA0C9E2FF9DC7
+      E1FF4B84BCFF0000000000000000000000000000000000000000000000000000
+      FFEB262BFFFF5C69FFFF5B68FFFF5A67FEFF5865FEFF5663FEFF5461FEFF2227
+      FCFF0000FBF20000000000000000000000000000000000000000000000006D6C
+      E3536A6ADFE68E93EDFFBEC3F8FFCCD3F9FFC4CBF9FFAAB4F4FF6670E2FF535E
+      D1E6505DCE53000000000000000000000000BC6B36D8F6DFD1FFE9AA80FFFEFA
+      F6FFFDFAF6FFC88C64FFFBF3EEFFFBF1EAFFFCF6F2FFFEFBF8FFFCF6F1FFF9EC
+      E2FFF8E7DBFFEED0BAFFECD0BDFFBB703EF80000000000000000000000006E9D
+      D5FF6C9BD3FF699AD2FF6697CFFF6395CDFF6093CBFF5C90C8FF598EC6FF558B
+      C3FF5188C0FF0000000000000000000000000000000000000000000000000000
+      00000000FFEC0000FFFF0000FFFF0000FFFF0000FDFF0000FDFF0000FDFF0000
+      FDEC000000000000000000000000000000000000000000000000000000000000
+      00006D6DE2236B6AE17D686ADDDB6364DCF36164DAF35D63D9DB5B63D67D5862
+      D42300000000000000000000000000000000BC6B369BF6E0D1FFF7E0D1FFFEFB
+      F8FFFEFBF7FFFDF9F6FFFCF5F0FFFAF0EAFFFBF2EDFFFDF9F6FFFDFAF7FFFBF1
+      EBFFF8E9DFFEECD0BDFBC9895EECB56935630000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000BC6B3671BC6B3690BC6B36CCBC6B
+      36EEBC6B36FABB6B36FEBB6B36FFBB6A36FFBB6A36FFBC6C39FFBD6E3BFFBB6D
+      3AFFBB6B38EFBB703ECBB6693554FFFFFF000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000113D55F7285F87FB4988BDFB428DBCC12D77B32200000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000041924E233D8F497D3A8C44DB368940F332873CF32F8437DB2C81337D287F
+      3023000000000000000000000000000000000000000000000000000000000000
+      00002B6583FB94C7F9FF91C9F9FF4185C9FF1C64AAF32E79B92F000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000004999
+      5853459653E6419950FF7DC28FFF96D0A6FF96CFA6FF78BE89FF368D42FF2C81
+      34E6297F3053000000000000000000000000A97151A9C38E68FFC08B66FFBE88
+      64FF4389AAFFE0F2FFFF549AD8FF1A7ABEFF4998C5FF4081B6FF99796BFFAB75
+      54FFA97353FFA97151FFA97151A900000000A97151A9C38E68FFC08B66FFBE88
+      64FFBB8561FFB9835FFFB47E5CFFB27C5AFFB17B58FFAE7957FFAD7656FFAB75
+      54FFA97353FFA97151FFA97151A900000000A97151A9C38E68FFC08B66FFBE88
+      64FFBB8561FFB9835FFFB47E5CFFB27C5AFFB17B58FFAE7957FFAD7656FFAB75
+      54FFA97353FFA97151FFA97151A9000000000000000000000000519F61534D9C
+      5DF464B478FFA8DBB5FF87CC98FF66BC7DFF64BA7CFF86CB98FFA5D9B4FF58AA
+      6BFF2C8134F4297F30530000000000000000C8926CFFFFFFFFFFFFFFFFFFFFFF
+      FFFFA7C5D9FF7AB6D5FF90B7D1FF55C9E4FF5BDFF5FF78D0EDFF519DDDFFE4F0
+      FAFFFFFFFFFFFFFFFFFFA97251FF00000000C8926CFFE6E5E5FFE5E5E5FFE5E5
+      E6FFE5E5E5FFE5E5E5FFE6E5E5FFE5E5E5FFE6E5E5FFE5E6E5FFE6E6E6FFE6E5
+      E5FFE5E6E6FFE6E5E6FFA97251FF00000000C8926CFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFA97251FF000000000000000059A66B2256A366E56AB9
+      7DFFA8DBB2FF60BC77FF5CBA73FF59B870FF59B56FFF58B56FFF5BB774FFA5D9
+      B3FF5AAA6CFF2C8234E5297F302200000000CA946EFFFFFFFFFFFFFFFFFFFFFF
+      FEFFFFFFFDFFB3D6E6FF76BAD7FFC2F6FDFF63DFF7FF5DE2F8FF79D3F0FF4A99
+      DCFFE3EEF5FFFFFFFFFFAA7353FF00000000CA946EFFE7E7E7FFE8E7E7FFE7E7
+      E7FFE7E7E7FFE7E7E7FFC3C3C3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFE7E7E7FFAA7353FF00000000CA946EFFFFFFFFFFBEBEBEFFBABA
+      BAFFB2B2B2FFFEFAF7FFB2B2B2FFAEAEAEFFA5A5A5FFFEFAF7FF989898FF9595
+      95FF919191FFFFFFFFFFAA7353FF00000000000000005DA9707E53AB68FFAADD
+      B4FF64C179FF5FBE71FF60BC77FFFFFFFFFFFFFFFFFF59B870FF58B56EFF5CB7
+      74FFA6DAB4FF388F43FF2C82347E00000000CC976FFFFFFFFFFFFFFFFCFFFFFF
+      FDFFFEFEFCFFFEFEFCFFB0D5E4FF77CBE7FFC7F7FDFF5EDCF5FF5AE1F7FF7BD4
+      F1FF4B9ADDFFD6E8F7FFAC7554FF00000000CC976FFFE9E9E9FFD28358FFD283
+      58FFD28358FFE9E9E9FFC3C3C3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFE9EAEAFFAC7554FF00000000CC976FFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFAC7554FF000000000000000061AC75DB8ACC98FF89D3
+      96FF6BC67AFF63C170FF55AB65FFFFFFFFFFFFFFFFFF59B870FF59B870FF5BB9
+      72FF85CC97FF7BBE8DFF308539DB00000000D19C73FFFFFFFFFFFEFEFCFFFEFE
+      FCFFFEFEFCFFFDFDFBFFFDFDFBFFBEE7F1FF79D3EEFFC7F7FDFF5FDCF5FF5BE2
+      F7FF7AD6F2FF51A2E2FF9C7E6EFF00000000D19C73FFECECECFFECECEBFFECEC
+      EBFFECECECFFECEBECFFC3C3C3FFC3C3C3FFC3C3C3FFC3C3C3FFC3C3C3FFC3C3
+      C3FFC3C3C3FFECECEBFFB07A58FF00000000D19C73FFFFFFFFFFC2C2C2FFC0C0
+      C0FFB9B9B9FFFEFAF7FFB5B5B5FFB3B3B3FFABABABFFFEFAF7FFA2A2A2FF9E9E
+      9EFF9B9B9BFFFFFFFFFFB07A58FF000000000000000065AF7AF6A9DDB3FF7DCF
+      8AFF75CC81FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF59B8
+      70FF67BE7DFF9CD4ABFF34883DF600000000D49E75FFFFFFFFFFFEFEFCFFFDFD
+      FBFFFDFDFCFFFDFDFBFFFDFDF9FFFCFCF8FFBEE6F2FF7DD4EEFFC4F6FDFF6CDD
+      F6FF6DCAEDFF63A3D7FF6399C9FF5192CA26D49E75FFEFEEEEFFEFEFEFFFEFEE
+      EEFFEFEEEEFFEEEFEEFFEEEEEEFFEEEFEFFFEEEEEEFFEEEEEEFFEEEEEEFFEFEE
+      EEFFEEEEEEFFEEEEEFFFB27C5AFF00000000D49E75FFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFB27C5AFF000000000000000069B27EF6B6E2BEFF8BD5
+      97FF7AC986FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF59B8
+      70FF69C17EFF9DD4AAFF388B42F600000000D5A076FFFFFFFFFFFDFDFCFFFDFD
+      FBFFFDFDFAFFFCFCF9FFFCFBF7FFFBF9F5FFFBF8F4FFB3E1EDFF81D6EEFFB2E3
+      F9FF8BC0E7FFAED3F6FFC4E0FCFF669FD3F7D5A076FFF1F1F0FFF1F0F1FFF0F1
+      F1FFF1F0F1FFF1F1F1FFC3C3C3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFF1F1F1FFB57E5CFF00000000D5A076FFFFFFFFFFC8C8C8FFC6C6
+      C6FFC0C0C0FFFEFAF7FFBABABAFFB8B8B8FFB2B2B2FFFEFAF7FFA9A9A9FFA7A7
+      A7FFA5A5A5FFFFFFFFFFB57E5CFF00000000000000006DB583DBACDDB6FFA6DF
+      AFFF81CB8CFF7CC986FF6EBD79FFFFFFFFFFFFFFFFFF5BAC6AFF60BC77FF5CBA
+      73FF8BD199FF80C592FF3C8E47DB00000000D8A279FFFFFFFFFFFDFDFAFFFCFC
+      FAFFFCFBF9FFFBFAF6FFFBF8F5FFFBF7F4FFFBF6F1FFF8F4EEFFABDDE8FF77BE
+      E7FFB4D2F0FFE5F3FFFFACD2EFFF488CC7E8D8A279FFF2F2F2FFD28358FFD283
+      58FFD28358FFF2F2F3FFC3C3C3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFF3F3F3FFB7815EFF00000000D8A279FFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFB7815EFF000000000000000070B8877E85C797FFD2EE
+      D7FF95D9A0FF8AD394FF7FC889FFFFFFFFFFFFFFFFFF79CD85FF6BC37CFF6FC7
+      7EFFACDFB5FF459E57FF40914C7E00000000D9A379FFFFFFFFFFFCFBF9FFFCFB
+      F8FFFBF9F7FFFBF7F4FFFAF7F2FFF9F5F0FFF7F3EDFFF6EFEAFFF5EBE7FFB4D7
+      E2FF58A5D8FF85B1DBFF469DD0FF2B95D15ED9A379FFF5F5F5FFF5F5F4FFF4F5
+      F4FFF4F4F4FFF5F5F4FFC3C3C3FFC3C3C3FFC3C3C3FFC3C3C3FFC3C3C3FFC3C3
+      C3FFC3C3C3FFF4F4F5FFBA8560FF00000000D9A379FFFFFFFFFFCCCCCCFFCACA
+      CAFFC6C6C6FFFEFAF7FFBDBDBDFFBBBBBBFFB7B7B7FFFEFAF7FFB1B1B1FFB0B0
+      B0FFADADADFFFFFFFFFFBA8560FF000000000000000073BA8A2270B887E5AADA
+      B7FFD8F1DCFF92D89DFF88CD93FF84CC8EFF8BD496FF8AD495FF83D28EFFAFE0
+      B7FF6BB97DFF489856E54494512200000000DBA47AFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFBD8763FF00000000DBA47AFFF6F6F6FFF6F6F6FFF6F6
+      F6FFF6F6F6FFF6F6F6FFF6F6F6FFF6F6F6FFF6F6F6FFF6F6F6FFF6F6F6FFF6F6
+      F6FFF6F6F6FFF6F6F6FFBD8763FF00000000DBA47AFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFBD8763FF00000000000000000000000073BB8B5370B8
+      87F4AFDCBBFFDCF2E0FFB6E4BDFF9BDBA5FF96D9A0FFA5DFAFFFC0E8C5FF79C2
+      8AFF509E5FF44C9B5B530000000000000000DCA77BFFDCA77BFFDCA77BFFDCA7
+      7BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFDCA7
+      7BFFDCA77BFFDCA77BFFC08B66FF00000000DCA77BFFDCA77BFFDCA77BFFDCA7
+      7BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFDCA7
+      7BFFDCA77BFFDCA77BFFC08B66FF00000000DCA77BFFDCA77BFFDCA77BFFDCA7
+      7BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFDCA77BFFDCA7
+      7BFFDCA77BFFDCA77BFFC08B66FF0000000000000000000000000000000073BB
+      8B5371B887E694CEA4FFC3E6CBFFCFEBD4FFC9E9CEFFAFDDB8FF6DB97FFF58A5
+      69E654A16553000000000000000000000000DDAC85FDE8B992FFE8B992FFE8B9
+      92FFE8B992FFE8B992FFE8B992FFE8B992FFE8B992FFE8B992FFE8B992FFE8B9
+      92FFE8B992FFE8B992FFC1906FFD00000000DDAC85FDE8B992FFE8B992FFE8B9
+      92FFE8B992FFE8B992FFE8B992FFE8B992FFE8B992FFE8B992FFE8B992FFE8B9
+      92FFE8B992FFE8B992FFC1906FFD00000000DDAC85FDE8B992FFE8B992FFE8B9
+      92FFE8B992FFE8B992FFE8B992FFE8B992FFE8B992FFE8B992FFE8B992FFE8B9
+      92FFE8B992FFE8B992FFC1906FFD000000000000000000000000000000000000
+      000074BB8B2371B9887D6EB684DB6AB380F367B17CF363AE77DB60AB737D5CA8
+      6E2300000000000000000000000000000000A971516BDDB18DF4DCA77BFFDCA6
+      7AFFDAA47AFFD8A279FFD5A076FFD49E75FFD29D73FFCF9A72FFCE9970FFCB96
+      6FFFC9946CFFC49A7AF4A971516B00000000A971516BDDB18DF4DCA77BFFDCA6
+      7AFFDAA47AFFD8A279FFD5A076FFD49E75FFD29D73FFCF9A72FFCE9970FFCB96
+      6FFFC9946CFFC49A7AF4A971516B00000000A971516BDDB18DF4DCA77BFFDCA6
+      7AFFDAA47AFFD8A279FFD5A076FFD49E75FFD29D73FFCF9A72FFCE9970FFCB96
+      6FFFC9946CFFC49A7AF4A971516B000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000424D3E000000000000003E000000
+      2800000040000000500000000100010000000000800200000000000000000000
+      000000000000000000000000FFFFFF00FFFFFFFF00000000C003C00300000000
+      8001800100000000800180010000000080018001000000008001800100000000
+      8001800100000000C003C00300000000E007E00700000000F00FF00F00000000
+      F007F00700000000F007F00700000000F00FF00F00000000F00FF00F00000000
+      F81FF81F00000000FFFFFFFF00000000E007F800FFFFFFFF0000F800F9FFC003
+      0000E000F0FF80010000E000E07F800100008000C03F800100008000801F8001
+      00008000000F8001000080000007C003000080008603E00700008000CF01F00F
+      80018000FF80F007C0038003FFC0F007E0078003FFE1F00FE007800FFFF3F00F
+      E007800FFFFFF81FE01FFFFFFFFFFFFFFF80FFFFFFFFFFC10000FFFFFFE78380
+      C000FFFFFFC38180C0000000FF838080C0000000FF03800000000000C0038000
+      000000008007E00100000000800FF00F00000000801FF80700000000801FFC03
+      C0000000801FFE01C0000000801FFF00C0000000801FFF80C0000000801FFFC0
+      FFE0FFFFC03FFFC0FFF8FFFFFFFFFFFFFFFFFFFF0000FFFFF00FF00F00008001
+      E007E0070000E007C003C0030000E007800180010000E007800180010000E007
+      800180010000E007800180010000E007800180010000E007800180010000E007
+      800180010000E007800180010000E007C003C0030000E007E007E0070000E007
+      F00FF00F0000FFFFFFFFFFFF0000FFFFFFFFF07FFFFFFFFFF00FF03FFFFFFFFF
+      E007000100010001C00300010001000180010001000100018001000100010001
+      8001000100010001800100000001000180010000000100018001000000010001
+      80010000000100018001000100010001C003000100010001E007000100010001
+      F00F000100010001FFFFFFFFFFFFFFFF00000000000000000000000000000000
+      000000000000}
+  end
+end

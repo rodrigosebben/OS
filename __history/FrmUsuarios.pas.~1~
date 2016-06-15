@@ -1,0 +1,35 @@
+unit FrmUsuarios;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls;
+
+type
+  TFormUsuarios = class(TForm)
+    Panel1: TPanel;
+    Button1: TButton;
+    Panel2: TPanel;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormUsuarios: TFormUsuarios;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormUsuarios.Button1Click(Sender: TObject);
+begin
+
+  CLOSE;
+
+end;
+
+end.

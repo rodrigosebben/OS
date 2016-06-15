@@ -1,0 +1,91 @@
+object FormPrincipal: TFormPrincipal
+  Left = 0
+  Top = 0
+  Caption = '...::: SISTEMA DE CONTROLE DE ORDENS DE SERVI'#199'O :::...'
+  ClientHeight = 370
+  ClientWidth = 809
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 351
+    Width = 809
+    Height = 19
+    Panels = <>
+    ExplicitLeft = 144
+    ExplicitTop = 164
+    ExplicitWidth = 0
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Top = 0
+    Width = 809
+    Height = 53
+    ButtonHeight = 53
+    Caption = 'ToolBar1'
+    TabOrder = 1
+    object BitBtn4: TBitBtn
+      Left = 0
+      Top = 0
+      Width = 75
+      Height = 53
+      Caption = 'USUARIOS'
+      DoubleBuffered = True
+      ParentDoubleBuffered = False
+      TabOrder = 3
+      OnClick = BitBtn4Click
+    end
+    object BitBtn3: TBitBtn
+      Left = 75
+      Top = 0
+      Width = 75
+      Height = 53
+      Caption = 'CHAMADOS'
+      DoubleBuffered = True
+      ParentDoubleBuffered = False
+      TabOrder = 2
+    end
+    object BitBtn2: TBitBtn
+      Left = 150
+      Top = 0
+      Width = 75
+      Height = 53
+      Caption = 'RELATORIO'
+      DoubleBuffered = True
+      ParentDoubleBuffered = False
+      TabOrder = 1
+    end
+    object BitBtn1: TBitBtn
+      Left = 225
+      Top = 0
+      Width = 75
+      Height = 53
+      Caption = 'SAIR'
+      DoubleBuffered = True
+      ParentDoubleBuffered = False
+      TabOrder = 0
+      OnClick = BitBtn1Click
+    end
+  end
+  object PnlForm: TPanel
+    Left = 0
+    Top = 53
+    Width = 809
+    Height = 298
+    Align = alClient
+    TabOrder = 2
+    ExplicitLeft = 96
+    ExplicitTop = 104
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+  end
+end

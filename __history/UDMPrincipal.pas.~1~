@@ -1,0 +1,23 @@
+unit UDMPrincipal;
+
+interface
+
+uses
+  SysUtils, Classes;
+
+type
+  TDMPrincipal = class(TDataModule)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DMPrincipal: TDMPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+end.
