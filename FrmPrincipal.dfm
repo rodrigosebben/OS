@@ -36,7 +36,6 @@ object FormPrincipal: TFormPrincipal
       Width = 89
       Height = 53
       Caption = 'CADASTROS'
-      DoubleBuffered = True
       Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
@@ -73,7 +72,6 @@ object FormPrincipal: TFormPrincipal
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
       Layout = blGlyphTop
-      ParentDoubleBuffered = False
       TabOrder = 3
       OnClick = BitBtn4Click
     end
@@ -83,7 +81,6 @@ object FormPrincipal: TFormPrincipal
       Width = 75
       Height = 53
       Caption = 'CHAMADOS'
-      DoubleBuffered = True
       Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
@@ -120,7 +117,6 @@ object FormPrincipal: TFormPrincipal
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
       Layout = blGlyphTop
-      ParentDoubleBuffered = False
       TabOrder = 2
       OnClick = BitBtn3Click
     end
@@ -130,7 +126,6 @@ object FormPrincipal: TFormPrincipal
       Width = 75
       Height = 53
       Caption = 'RELATORIO'
-      DoubleBuffered = True
       Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
@@ -167,7 +162,6 @@ object FormPrincipal: TFormPrincipal
         FF00FFFFFF00C17D4460C88B4DBBC88C4FFEC88C4FFFC88D4FF7C98C4FF7C589
         4CFEC4763B94FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
       Layout = blGlyphTop
-      ParentDoubleBuffered = False
       TabOrder = 1
     end
     object BitBtn1: TBitBtn
@@ -176,7 +170,6 @@ object FormPrincipal: TFormPrincipal
       Width = 75
       Height = 53
       Caption = 'SAIR'
-      DoubleBuffered = True
       Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         20000000000000040000120B0000120B00000000000000000000FFFFFF00FFFF
@@ -213,7 +206,6 @@ object FormPrincipal: TFormPrincipal
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
         FF00FFFFFF00FFFFFF00FFFFFF006D9CD4896A9AD2FB6697CFEE}
       Layout = blGlyphTop
-      ParentDoubleBuffered = False
       TabOrder = 0
       OnClick = BitBtn1Click
     end
@@ -224,6 +216,8 @@ object FormPrincipal: TFormPrincipal
     Width = 809
     Height = 298
     Align = alClient
+    Color = clInactiveCaption
+    ParentBackground = False
     TabOrder = 2
   end
 end
