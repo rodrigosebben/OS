@@ -48,7 +48,6 @@ object DMPrincipal: TDMPrincipal
       
         'from usuarios u left join TipoUsuarios t on u.Tipousuario_id=t.i' +
         'd')
-    Active = True
     Left = 112
     Top = 20
     object QueryUsuariosid: TLargeintField
@@ -147,7 +146,6 @@ object DMPrincipal: TDMPrincipal
       'select id, '
       '       upper(TipoUsuario) TipoUsuario '
       'from TipoUsuarios')
-    Active = True
     Left = 208
     Top = 20
     object QueryTipoUsuariosid: TLargeintField
@@ -191,7 +189,6 @@ object DMPrincipal: TDMPrincipal
       'Select id, '
       '       upper(TipoChamado) TipoChamado '
       'from TipoChamados')
-    Active = True
     Left = 320
     Top = 20
     object QueryTipoChamadosid: TLargeintField
@@ -235,7 +232,6 @@ object DMPrincipal: TDMPrincipal
       'select id, '
       '       upper(Situacao) Situacao'
       'from SituacaoChamados')
-    Active = True
     Left = 448
     Top = 20
     object QuerySituacaoChamadosid: TLargeintField
@@ -254,7 +250,6 @@ object DMPrincipal: TDMPrincipal
     SQL.Strings = (
       'select id,upper(Prioridade) Prioridade'
       'from PrioridadeChamados')
-    Active = True
     Left = 588
     Top = 20
     object QueryPrioridadeChamadosid: TLargeintField
@@ -270,13 +265,14 @@ object DMPrincipal: TDMPrincipal
   end
   object MyConn: TMyConnection
     Database = 'OS'
+    Port = 2020
     Username = 'root'
-    Password = '1904'
-    Server = 'informatica'
+    Server = 'ielb.no-ip.org'
     Connected = True
     LoginPrompt = False
     Left = 28
     Top = 20
+    EncryptedPassword = 'CEFFC6FFCFFFCBFF'
   end
   object QueryChamados: TMyQuery
     SQLInsert.Strings = (
@@ -343,7 +339,6 @@ object DMPrincipal: TDMPrincipal
         '                left join SituacaoChamados s on c.SituacaoChamad' +
         'o_id = s.id'
       'order by data_cadastro;')
-    Active = True
     Left = 712
     Top = 20
     object QueryChamadosid: TLargeintField
